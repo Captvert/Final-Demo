@@ -469,6 +469,13 @@ body::-webkit-scrollbar-thumb:hover{
         justify-content: center;
         top: 0px;
     }
+
+    .package-icon-arabic{
+    width: clamp(0px, 2.3255814vw, 11.78px);
+    filter: drop-shadow(0px 0px 1.3vw #DBA622);
+    margin-left: 1.39534884vw;
+    transform: rotateY(180deg)
+}
 </style>
 
 <script>
@@ -487,7 +494,7 @@ function startCountdownArabic() {
   if (!countdownElement) return;
 
   // Replace class if needed
-  const targetDate = new Date('2025-07-31T23:59:59');
+  const targetDate = new Date('2025-08-10T23:59:59');
   let timerId;
 
   function toArabicNumerals(num) {
@@ -532,7 +539,7 @@ function startCountdownArabic() {
 function startCountdownEnglish() {
   const countdownElement = document.querySelector('.countdown');
 
-  const targetDate = new Date('2025-07-31T23:59:59');
+  const targetDate = new Date('2025-08-10T23:59:59');
   let timerId;
 
   function updateCountdown() {
@@ -629,8 +636,10 @@ startCountdownEnglish();
         serviceElements.PF7.innerHTML =  `<div class="bulletpoint bulletpoint-en"></div> Bonus:`
         serviceElements.SF4.innerHTML = `<li>-Complimentary bridal portrait session.</li> `;
 
-        serviceElements.PNC.innerHTML = `<div class="package-name-and-icon"> Starter Package </div>  <p class = "package-description">Can be adjusted to your needs.</p>`;
+        serviceElements.PNC.innerHTML = `<div class="package-name-and-countdown"><div class="package-name-and-icon"> <img src="ImagesFolder/Flash-icon.png" class="package-icon">Flash Package</div> <p class="countdown countdown-en">03 : 22 : 18 : 43</p>  </div>`;
     
+
+        startCountdownEnglish();
     }else if (serviceNO == 2 ){
         serviceElements.ST.style.backgroundImage = 'url(ImagesFolder/product-shoot-review-thumbnail.png)';
 
@@ -777,7 +786,7 @@ function currentLanguage(){
 
 
         serviceElements.SINA.innerHTML = `   <div class="service-icon-arabic"></div>  تغطية أفراح`;
-        serviceElements.PNI.innerHTML = `<div class="package-name-and-icon"> <img src="ImagesFolder/Flash-icon.png" class="package-icon" style="margin-right: 0px; margin-left: clamp(0px, 1.39535vw, 7.07px); transform:rotateY(180deg);"> باقة الفلاش  </div>`
+        serviceElements.PNI.innerHTML = `<div class="package-name-and-icon"> <img src="ImagesFolder/Flash-icon.png" class="package-icon-arabic" style="margin-right: 0px; margin-left: clamp(0px, 1.39535vw, 7.07px); transform:rotateY(180deg);"> باقة الفلاش  </div>`
         serviceElements.CrossedPrice.innerText = `١٢٬٠٠٠`;
         serviceElements.CurrentPrice.innerText =  `٩٥٠٠`;
 
@@ -799,9 +808,10 @@ function currentLanguage(){
         serviceElements.SF4.innerHTML = `<li>-جلسة تصوير بورتريه مجانية للمعرس.</li> `;
 
         
-        serviceElements.PNC.innerHTML = `<div class="package-name-and-icon"> الباقة الرئيسية </div>  <p class = "package-description">يتم التعديل حسب الإحتياج.</p>`;
+        serviceElements.PNC.innerHTML = `<div class="package-name-and-countdown"><div class="package-name-and-icon"> <img src="ImagesFolder/Flash-icon.png" class="package-icon-arabic">باقة الفلاش </div> <p class="countdown countdown-ar">03 : 22 : 18 : 43</p>  </div>`;
 
     
+        startCountdownArabic();
     }else if (serviceNO == 2 ){
 
         serviceElements.ST.style.backgroundImage = 'url(ImagesFolder/product-shoot-review-thumbnail.png)';
@@ -934,7 +944,6 @@ function currentLanguage(){
         element.classList.replace('bulletpoint-ar', 'bulletpoint-en');
         });
 
-        startCountdownArabic();
 
         const serviceNO = localStorage.getItem('serviceNo');
         console.log(serviceNO);
@@ -968,8 +977,9 @@ function currentLanguage(){
         serviceElements.PF7.innerHTML =  `<div class="bulletpoint bulletpoint-en"></div> Bonus:`
         serviceElements.SF4.innerHTML = `<li>-Complimentary bridal portrait session.</li> `;
 
-        serviceElements.PNC.innerHTML = `<div class="package-name-and-icon"> Starter Package </div>  <p class = "package-description">Can be adjusted to your needs.</p>`;
+        serviceElements.PNC.innerHTML = `<div class="package-name-and-countdown"><div class="package-name-and-icon"> <img src="ImagesFolder/Flash-icon.png" class="package-icon">Flash Package</div> <p class="countdown countdown-en">03 : 22 : 18 : 43</p>  </div>`;
 
+        startCountdownEnglish();
     
     }else if (serviceNO == 2 ){
         serviceElements.ST.style.backgroundImage = 'url(ImagesFolder/product-shoot-review-thumbnail.png)';
@@ -1140,8 +1150,6 @@ function switchLanguage(){
         element.classList.replace('bulletpoint-en', 'bulletpoint-ar');
         });
 
-        startCountdownArabic();
-
 
 
 
@@ -1153,7 +1161,7 @@ function switchLanguage(){
 
 
         serviceElements.SINA.innerHTML = `   <div class="service-icon-arabic"></div>  تغطية أفراح`;
-        serviceElements.PNI.innerHTML = `<div class="package-name-and-icon"> <img src="ImagesFolder/Flash-icon.png" class="package-icon" style="margin-right: 0px; margin-left: clamp(0px, 1.39535vw, 7.07px); transform:rotateY(180deg);"> باقة الفلاش  </div>`
+        serviceElements.PNI.innerHTML = `<div class="package-name-and-icon"> <img src="ImagesFolder/Flash-icon.png" class="package-icon-arabic" style="margin-right: 0px; margin-left: clamp(0px, 1.39535vw, 7.07px); transform:rotateY(180deg);"> باقة الفلاش  </div>`
         serviceElements.CrossedPrice.innerText = `١٢٬٠٠٠`;
         serviceElements.CurrentPrice.innerText =  `٩٥٠٠`;
 
@@ -1174,8 +1182,11 @@ function switchLanguage(){
         serviceElements.PF7.innerHTML =  `<div class='bulletpoint bulletpoint-ar'></div>  الإضافات:  `;
         serviceElements.SF4.innerHTML = `<li>-جلسة تصوير بورتريه مجانية للمعرس.</li> `;
 
-        serviceElements.PNC.innerHTML = `<div class="package-name-and-icon"> الباقة الرئيسية </div>  <p class = "package-description">يتم التعديل حسب الإحتياج.</p>`;
+        serviceElements.PNC.innerHTML = `<div class="package-name-and-countdown"><div class="package-name-and-icon"> <img src="ImagesFolder/Flash-icon.png" class="package-icon-arabic">باقة الفلاش </div> <p class="countdown countdown-ar">03 : 22 : 18 : 43</p>  </div>`;
     
+
+        startCountdownArabic();
+
     }else if (serviceNO == 2 ){
 
         serviceElements.ST.style.backgroundImage = 'url(ImagesFolder/product-shoot-review-thumbnail.png)';
@@ -1308,7 +1319,6 @@ function switchLanguage(){
         element.classList.replace('bulletpoint-ar', 'bulletpoint-en');
         });
 
-        startCountdownArabic();
 
         const serviceNO = localStorage.getItem('serviceNo');
         console.log(serviceNO);
@@ -1342,8 +1352,11 @@ function switchLanguage(){
         serviceElements.PF7.innerHTML =  `<div class="bulletpoint bulletpoint-en"></div> Bonus:`
         serviceElements.SF4.innerHTML = `<li>-Complimentary bridal portrait session.</li> `
 
-        serviceElements.PNC.innerHTML = `<div class="package-name-and-icon"> Starter Package </div>  <p class = "package-description">Can be adjusted to your needs.</p>`;
+
+        serviceElements.PNC.innerHTML = `<div class="package-name-and-countdown"><div class="package-name-and-icon"> <img src="ImagesFolder/Flash-icon.png" class="package-icon">Flash Package</div> <p class="countdown countdown-en">03 : 22 : 18 : 43</p>  </div>`;
     
+        startCountdownEnglish();
+
     }else if (serviceNO == 2 ){
         serviceElements.ST.style.backgroundImage = 'url(ImagesFolder/product-shoot-review-thumbnail.png)';
 
@@ -1453,6 +1466,16 @@ function switchLanguage(){
 
 }};          
 
+
+
+
+
+
+
+
+          
+
+</script>
 
 
 
