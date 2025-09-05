@@ -17,18 +17,32 @@
 </head>
 <body class="body">
 
+
+
+
+
+
+
+
+
+
 <!--Header-->
     <header class="header">
 
         <div class="header-items-container">
 
-<!--Left Side Header-->
+         <!--Left Side Header-->
          <a class="header-left-box" href="index.html">
             <div class="logo-mask"><img src="ImagesFolder/Logo.png" alt="Logo-Khalid" class="header-logo" loading="lazy"></div>
             <div class="name-mask"><div class="name english" >Khalid</div></div>
          </a>     
 
-<!--Right Side Header-->
+
+
+
+
+
+         <!--Right Side Header-->
          <div class="header-right-box">
 
             <button class="language language-animation" onclick="
@@ -67,13 +81,14 @@
                 </div>
 
             </div>
-
-
          </div>
-
         </div>
 
-        <!--Hamburger Menu-->
+
+
+
+
+         <!--Hamburger Menu-->
          <aside class="sidebar">
             <a href="#" class="sidebar-booking-section" onclick="sidebarX()" >Booking</a>
             <a  href="#service-section" class="sidebar-services-section" onclick="sidebarX()">Services</a>
@@ -89,8 +104,23 @@
          </aside>
 
     </header>
-    
+
+
+
+
+
+
+
+
+
+<!--Hero Section (Bed)-->
 <div class="hero-bed">
+
+
+
+
+
+    <!--Hero Sectio Info (Top)-->
     <div class="hero-info">
             <div class="hero-info-image">
                 <img src="ImagesFolder/info-image.png" class="info-image">
@@ -107,6 +137,11 @@
             </div>
     </div>
 
+
+
+
+
+    <!--Hero Section Main-->
     <div class="hero-main">
         <div class="hero-hook-and-package-container">
         <p class="hero-hook">Do You Need A Wedding Coverage?</p>
@@ -150,12 +185,24 @@
             <button class="black-cta-modified" onclick="window.location.href='review-page.html'; let serviceNo = 1 ; let mainPageService = '.service-pick-option1'; let mainPageServiceContainer  = '.service1-based-container'; localStorage.setItem('serviceNo',serviceNo);  localStorage.setItem('mainPageService',mainPageService);  localStorage.setItem('mainPageServiceContainer',mainPageServiceContainer);">Book Now</button>
         </div>
     </div>
+
+
+
+
+
 </div>
 
 
 
-    
-    <section class="service-section" id="service-section">
+
+
+
+
+
+
+
+<!--Service Section-->
+<section class="service-section" id="service-section">
         
             <div class="services-introduction">
                 <p class="services-introduction-title">
@@ -165,7 +212,14 @@
                     Tailored photographic solutions designed to meet your unique needs and bring your vision to reality.
                 </p>
             </div>
+
+
+
+
+
+            <!--Service Card 1-->
             <section class="service-card1">
+
                 <div class="service-card1-canvas-holder">
                     <div class="canvas-card1-holder-items-container" onclick="window.location.href='review-page.html';  serviceNo = 3 ;  mainPageService = '.service-pick-option3';  mainPageServiceContainer  = '.service3-based-container'; localStorage.setItem('serviceNo',serviceNo);  localStorage.setItem('mainPageService',mainPageService);  localStorage.setItem('mainPageServiceContainer',mainPageServiceContainer);"  >
                         <div class="service-card1-canvas"></div>
@@ -183,18 +237,21 @@
 
 
 
-
-
-
-
+            <!--Service Card 2-->
             <section class="service-card2">
+
                 <div class="service-card2-canvas-holder">
+
                     <div class="canvas-card2-holder-items-container" onclick="window.location.href='review-page.html';  serviceNo = 2 ;  mainPageService = '.service-pick-option2';  mainPageServiceContainer  = '.service2-based-container'; localStorage.setItem('serviceNo',serviceNo);  localStorage.setItem('mainPageService',mainPageService);  localStorage.setItem('mainPageServiceContainer',mainPageServiceContainer);">
+                        
                         <div class="service-card2-canvas">
+                            
                             <div class="canvas-items-container">
-                                <div class="epp-checkmark"  onclick="  event.stopPropagation();
+                               
+                               <div class="epp-checkmark"  onclick="  event.stopPropagation();
                                     eppPopUp () 
                                     "><img src="ImagesFolder/epp-checkmark-icon.png" class="epp-checkmark-icon" loading="lazy">EPP Checkmark</div>
+                                    
                                 <div class="category">
                                     <img src="ImagesFolder/jewelry-icon.png" loading="lazy" class="jewelry-icon">
                                         Jewelry
@@ -242,6 +299,7 @@
 
 
 
+            <!--Service Card 3-->
             <section class="service-card3">
                 <div class="service-card3-canvas-holder">
                     <div class="canvas-card3-holder-items-container" onclick="window.location.href='review-page.html';  serviceNo = 4 ;  mainPageService = '.service-pick-option4';  mainPageServiceContainer  = '.service4-based-container'; localStorage.setItem('serviceNo',serviceNo);  localStorage.setItem('mainPageService',mainPageService);  localStorage.setItem('mainPageServiceContainer',mainPageServiceContainer);">
@@ -256,14 +314,28 @@
 
             </section>
         </section>
-    
 
-    <section class="experience-section" id="experience-section">
+
+
+
+
+
+
+
+
+
+<!--experience Section-->
+<section class="experience-section" id="experience-section">
         <div class="experience-introduction">
             <div class="experience-introduction-title">Experience</div>
             <div class="experience-introduction-description">This Section highlights my journey as a photographer</div>
         </div>
-    
+        
+        
+        
+        
+        
+        <!--Counter Section-->
         <section class="counter-section">
 
             <div class="counter-card1">
@@ -275,7 +347,7 @@
                     </div>
                 </div>
             </div>
-
+            
             <div class="counter-card2">
                 <div class="counter-card2-items-container">
                     <div  class="counter-card2-number">+113</div>
@@ -299,6 +371,9 @@
 
 
 
+
+
+        <!--Banner Section-->
         <section class="banner-section">
             <div class="banner-introduction">
                 <div class="banner-introduction-title">Events</div>
@@ -343,7 +418,16 @@
     </section>
 
 
-    <section class="gallery-section" id="gallery-section">
+
+
+
+
+
+
+
+    
+<!--Gallery Section-->
+<section class="gallery-section" id="gallery-section">
         <div class="gellery-introduction">
             <div class="gallery-introduction-title">More Pics Less Words</div>
             <div class="gallery-introduction-description">Feel free to view and scroll this gallery of work all <strong>captured by me.</strong></div>
@@ -1068,11 +1152,19 @@
                 For inquiries contact Email: Khaledalgethami@gmail.com </div>
         </div>
 
-    </section>
+</section>
 
 
 
-    <section class="footer-section">
+
+
+
+
+
+
+
+<!--Footer Section-->
+<section class="footer-section">
         <div class="footer-section-container">
             <h1 class="footer-title">How To Book?</h1>
             <h2 class="footer-subtitle">My Booking Process:</h2>
@@ -1120,7 +1212,7 @@
                         </div>
         </div>
                     <div class="footer-copyrights"><img src="ImagesFolder/copyright-symbol.png"> <p class="captvert-rights">Captvert</p></div>
-    </section>
+</section>
 
 
 
@@ -1129,3 +1221,4 @@
 <script  src="PFS.js"></script>
 
 </html>
+
