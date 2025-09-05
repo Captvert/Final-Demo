@@ -24,13 +24,19 @@
 
         <div class="header-items-container">
 
-                <!--Left Side Header-->
+
+
+
+         <!--Left Side Header-->
          <a class="header-left-box" href="index.html">
             <div class="logo-mask"><img src="ImagesFolder/Logo.png" alt="Logo-Khalid" class="header-logo" loading="lazy"></div>
             <div class="name-mask"><div class="name english" >Khalid</div></div>
          </a>     
 
-<!--Right Side Header-->
+
+
+
+         <!--Right Side Header-->
          <div class="header-right-box">
 
             <button class="language language-animation" onclick="
@@ -47,13 +53,13 @@
 
         </div>
 
-        <!--Hamburger Menu-Comin Soon-->
+                                        <!--Hamburger Menu-Comin Soon-->
 
         </div>
 
 
 
-    </header>
+    </header> 
 
 
 
@@ -64,17 +70,13 @@
 
 
 
+<!--Booking Section-->
+<section class="booking-section">
 
 
 
 
-
-
-
-
-
-
-    <section class="booking-section">
+        <!--Introduction Section-->
         <div class="booking-introduction">
             <p class="booking-introduction-title">
                 You Will Get A Call Today!
@@ -85,7 +87,11 @@
             </p>
         </div>
 
-            <form action="thank-you-page" class="booking-form">
+
+
+
+          <!--Form Section-->
+          <form action="thank-you-page" class="booking-form">
                 
                 <div class="booking-form-inputs-container">
 
@@ -93,7 +99,7 @@
 
 
 
-
+                <!--Service Pick Section-->
                 <div class="service-pick-container">
                         <label class="service-pick-title service-pick-title-translate" for="#service-pick">Pick a service</label>
                         <div class="service-pick">
@@ -142,9 +148,13 @@
                         which will be discussed in our call.</p>
 
 
-
                 </div>
 
+                
+
+
+
+                    <!--Starter Inputs Section-->
                     <div class="input-wrapper fullname-wrapper">
                         
                         <input type="text" class="fullname-input text-input" id="fullname-input" placeholder="Full Name (Personal)"  required    id="fullname-input" autocomplete="off">
@@ -163,9 +173,7 @@
 
 
 
-
-
-
+                    <!--Service Based Section 1-->
                     <div class="service1-based-container service-based-container-off">
 
                        
@@ -174,46 +182,32 @@
                         <input type="text" class="place-of-occasion-input text-input  form-input"placeholder="Place of Occasion"  required autocomplete="off">
                         <label for="place-input" class="place-of-occasion-input-label label-off" data-value="PlaceOfWedding">Place of Occasion</label>
                         </div>
-                       
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-                    
-
+                    <!--Amount of Visitors Section-->   
                     <div class="amount-of-visitors-wrapper" data-value="visitorAmount">
                         
                     <label class="custom-dropdown-title custom-dropdown-title-translate" for="#custom-dropdown">Expected Number Of Visitors</label>
                     <div class="custom-dropdown  form-input" onclick="
-                    ">
-
-
-                       
-
+                    "> 
                     </div>
                     
                     </div>
 
 
 
-                    
-                    
-
-
 
 
                     </div>
+
+
+
+
+
+                    <!--Service Based Section 2-->
                     <div class="service2-based-container service-based-container-off" >
 
                         <div class="brand-name-input-wrapper brand-name-wrapper">
@@ -239,6 +233,12 @@
 
 
                     </div>
+
+
+
+
+
+                    <!--Service Based Section 3-->
                     <div class="service3-based-container service-based-container-off" >
 
 
@@ -253,6 +253,12 @@
 
 
                     </div>
+
+
+
+
+
+                    <!--Service Based Section 4-->
                     <div class="service4-based-container service-based-container-off" >
                        <div class="event-coverage-input1-wrapper event-coverage-input1-name-wrapper">
                         
@@ -288,16 +294,26 @@
 
                 </div>
 
+
+
+
+
+<!--Date and Time Pick Section-->
 <label for="date-and-time" class="specify-date-label date-label-title date-time-translate">Specify a date & time</label>
 
 <div class="booking-date-and-time-wrapper" >
-                            <div class="booking-date-and-time-container">
+    <div class="booking-date-and-time-container">
                                   <button class="booking-calendar-button" onclick="toggleCalendar();         
                                   const dateLabel = document.querySelector('.date-label-title');
                                   dateLabel.classList.replace('specify-date-label' , 'specify-date-label-valid');" type="button">
         <strong class="calendar-button-day"></strong>
     </button>
 
+
+
+
+
+    <!--Calendar Section-->
     <div class="booking-calendar-off">
 
         <div class="booking-calendar-header">
@@ -784,12 +800,25 @@
                 </div>
             </div>
 
-        </div></div>
-        <p>At</p>
-        <div type="time" onclick="timePickerToggle();" class="booking-time-input" style="display: flex;" > 
-
         </div>
-                        <div class="time-pick-container">
+    </div>
+
+    <p>At</p>
+
+
+
+
+
+    <!--Time Pick Button-->
+    <div type="time" onclick="timePickerToggle();" class="booking-time-input" style="display: flex;" > 
+    </div>
+
+
+
+
+
+    <!--Time Pick Container-->
+    <div class="time-pick-container">
         <div class="time-items-container">
                 <div class="hour-column">
                     <p class="time-labels">Hour</p>
@@ -844,18 +873,14 @@
                         </button>
     </div>
         
-                            </div>
-                        </div>
+    </div>
+</div>
+
+
 
 
 
 <!--Date Picker Arabic-->
-
-
-
-
-
-
 <div class="arabic-calendar-and-time-container arabic-calendar-off">
     <div class="booking-date-and-time-wrapper-arabic">
                           
@@ -1404,29 +1429,28 @@
     </div>
   </div>
 </div>
+
+
+
+
+
 </div>
 
 
 
 
 
+<!--Submit Button-->
+<button class="booking-submit-button" type="submit" onclick="dataExtraction(); saveUserData();  ">Finish Booking</button>
+            
+            
+            
+            
+            
+</form>
+</section>
 
 
-
-
-
-
-
-
-
-
-
-
-
-                <button class="booking-submit-button" type="submit" onclick="dataExtraction(); saveUserData();  ">Finish Booking</button>
-            </form>
-
-    </section>
 </body>
 <script  src="PFS.js"></script>
 
@@ -1605,6 +1629,8 @@ height: 0px;
     <script  src="pos.js">
 
     </script>
+
+
 
 
 
