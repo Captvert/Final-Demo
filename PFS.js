@@ -10,6 +10,53 @@ const hamburgerLine3NF = document.querySelector('.hamburger3-NF');
 
 const header = document.querySelector('.header');
 
+function retreiveCurrentLanguage(){
+    const langButton = document.querySelector('.language');
+    const langKey = langButton.innerText;
+    console.log('This is the langKey Boss' + langKey)
+    localStorage.setItem('langKey' , langKey);
+};
+
+
+const defaultGalleryCategory = document.querySelector('.gallery-category1');
+if (defaultGalleryCategory){
+defaultGalleryCategory.classList.add('gallery-category-active')};
+const defaultGalleryContainer = document.querySelector('.category1-items-container')
+if (defaultGalleryCategory){
+defaultGalleryContainer.classList.add('category-items-container-toggled')} ;
+rect = document.querySelector('.gallery-category1').getBoundingClientRect();
+const xCoordinate = rect.x;
+console.log(xCoordinate);
+console.log(window.innerWidth);
+const style = window.getComputedStyle(document.querySelector('.gallery-category1'));
+const width = style.width;
+const containerXCoordinates = document.querySelector('.gallery-section').getBoundingClientRect().x;
+console.log(`${containerXCoordinates}px are left of container`);
+console.log(xCoordinate - containerXCoordinates + 'is the final result')
+
+const toggleUnderline = document.querySelector('.toggle-underline');
+toggleUnderline.style.marginLeft = `${xCoordinate - (containerXCoordinates)}px`;
+toggleUnderline.style.width = width;
+
+
+        
+const toggleContainer = document.querySelector('.gallery-bar-toggle-container');
+toggleContainer.style.justifyContent = ' flex-end';
+
+
+const portrait = defaultGalleryContainer.querySelector('.portrait-mode');
+console.log(portrait)
+const landscape = defaultGalleryContainer.querySelector('.landscape-mode');    
+console.log(landscape)
+
+   
+portrait.classList.add('category-toggled-version');
+landscape.classList.remove('category-toggled-version'); 
+
+const galleryModeSwitchToggle = document.querySelector('.gallery-toggle-bar');
+galleryModeSwitchToggle.classList.add('p-toggle');
+galleryModeSwitchToggle.classList.remove('l-toggle');
+
 
 function countDownLanguage(){
 if (document.querySelector('.language').innerText == 'ع'){
@@ -21,7 +68,7 @@ if (countdownElement.classList.contains('countdown-ar')){
 
 
 // Set the target date to the end of July 2025
-const targetDate = new Date('2025-08-10T23:59:59');
+const targetDate = new Date('2025-09-10T23:59:59');
 
 function updateCountdown() {
   const now = new Date();
@@ -30,7 +77,6 @@ function updateCountdown() {
   if (diff <= 0) {
     // If the countdown is finished
     countdownElement.innerText = '00 : 00 : 00 : 00';
-    clearInterval(timer);
     return;
   }
 
@@ -70,7 +116,7 @@ const timer = setInterval(updateCountdown, 1000);
 
 
 // Set the target date to the end of July 2025
-const targetDate = new Date('2025-08-10T23:59:59');
+const targetDate = new Date('2025-09-10T23:59:59');
 
 function updateCountdown() {
   const now = new Date();
@@ -219,7 +265,7 @@ function currentLanguage(){
         hamburgerLine2NF.style.borderRadius = '50px 0px 0px 0px';
         hamburgerLine3NF.style.borderRadius = '50px 0px 0px 0px';
 
-                const heroBedA = document.querySelector('.hero-bed') ;
+        const heroBedA = document.querySelector('.hero-bed') ;
         heroBedA.style.direction = 'rtl';
 
         const roleA = document.querySelector('.role');
@@ -411,7 +457,6 @@ function currentLanguage(){
         ePPPoint2A.classList.add('epp-point2-arabic');   
         ePPPoint2A.innerHTML = "<div class='epp-point2-text-arabic'> <div class = 'epp-point2-arabic-l1'> لن تعزز اللمسات التعديلية أثناء التصوير و بعده نقاط قوة <strong style = 'margin-left: clamp(0px , 1.4vw , 7.126px);'>  :التعديل   </strong>  </div>  <div class = 'epp-point2-arabic-l2'>  المنتج أو تخفي نقاط ضعفه, ولكن تستهدف المنطقة أو </div> <div class = 'epp-point2-arabic-l3'> الأشياء المحيطة بالمنتج (مثل الإضاءة ولون الخلفية</div>  <div class = 'epp-point2-arabic-l4'> أو ملمسها وما إلى ذلك) لتحقيق الهدف الرئيسي المتمثل</div> <div class = 'epp-point2-arabic-l5'>  في عرض منتجك بوضوح و بطريقة تمثل</div> <div class = 'epp-point2-arabic-l6'> .  أسلوب العلامة التجارية </div> </div> <div class='bulletpoint2'></div>";
 
-
         const ePPPopUpDoneA = document.querySelector('.pop-up-done');
         ePPPopUpDoneA.classList.remove('pop-up-done');
         ePPPopUpDoneA.classList.add('pop-up-done-arabic');        
@@ -526,13 +571,11 @@ function currentLanguage(){
         const galleryFooterDescriptionA = document.querySelector('.gallery-footer-text');
         galleryFooterDescriptionA.innerHTML = "<p class = 'gdl1a' style = 'text-align:right;'> ,جميع صور المعرض محفوظة بحقوق الطبع والنشر لخالد القثامي. للاستفسار</p><p class = 'gdl2a' style = 'text-align:right;'>  <strong>Khaledalgethami@gmail.com</strong> : يحبذ التواصل عبر البريد الإلكتروني</p> ";
 
-
         let categoryWidth = window.getComputedStyle(galleryHeaderItem1A).width;
         console.log(categoryWidth)
 
         const toggleUnderline = document.querySelector('.toggle-underline');
         toggleUnderline.style.width = categoryWidth;
-
 
         rect = galleryHeaderItem1A.getBoundingClientRect();
         const xCoordinate = rect.x;
@@ -617,6 +660,8 @@ function currentLanguage(){
 
         localStorage.setItem('previousLanguage', JSON.stringify(language));
    
+        retreiveCurrentLanguage();
+        console.log('This is the the landmark')
 
     }else if (languageStored == 'English'){
 
@@ -733,7 +778,6 @@ function currentLanguage(){
         servicesIntroductionDescription.classList.remove('services-introduction-description-arabic');
         servicesIntroductionDescription.classList.add('services-introduction-description');
         servicesIntroductionDescription.innerHTML = 'Tailored photographic solutions designed to meet your unique needs and bring your vision to reality.';
-
 
         const card1HolderItemsContainer = document.querySelector('.canvas-card1-holder-items-container-arabic');
         card1HolderItemsContainer.classList.remove('canvas-card1-holder-items-container-arabic');
@@ -1047,6 +1091,9 @@ function currentLanguage(){
 
 
         console.log('English is the current language');
+        retreiveCurrentLanguage()
+        console.log('This is the the landmark')
+
 
     }};
 
@@ -1521,6 +1568,9 @@ function switchLanguage(){
         localStorage.setItem('previousLanguage', JSON.stringify(language));
 
     
+        retreiveCurrentLanguage();
+        console.log('This is the the landmark')
+    
     }else if (langButton.innerHTML == 'EN'){
 
         document.body.style.cssText = "background-color: #0D0D0D; display: flex;flex-direction: column; align-items: center; margin-left: 0px; margin-right: 0px; margin-top: 0px; font-family: Inter; color: white; overflow-x: hidden;";
@@ -1943,7 +1993,9 @@ function switchLanguage(){
         console.log('Switched Language to English');
 
         localStorage.setItem('previousLanguage', JSON.stringify(language));
-    }
+        retreiveCurrentLanguage();
+        console.log('This is the the landmark');
+    };
 
     const arabicSidebar = document.querySelector('.sidebar-arabic');
     const sidebar = document.querySelector('.sidebar');
@@ -2253,6 +2305,11 @@ console.log(popUp.classList);
 };
 
 
+
+
+
+
+
 function galleryCategoryToggle(categoryClicked , itsContainer){
     if(document.querySelector('.gallery-category-active')){
         document.querySelector('.gallery-category-active').classList.remove('gallery-category-active');
@@ -2282,9 +2339,11 @@ function galleryCategoryToggle(categoryClicked , itsContainer){
     }else{
         categoryClicked.classList.add('gallery-category-active');
         document.querySelector('.category-items-container-toggled')? document.querySelector('.category-items-container-toggled').classList.remove('category-items-container-toggled') : console.log('There is no toggled container');
+        console.log(itsContainer)
         itsContainer.classList.add('category-items-container-toggled');
         rect = categoryClicked.getBoundingClientRect();
         const xCoordinate = rect.x;
+        const containerXCoordinates = document.querySelector('.gallery-section').getBoundingClientRect().x;
 
         const style = window.getComputedStyle(categoryClicked);
         const width = style.width;
@@ -2401,4 +2460,38 @@ function tapToView (tapToViewURL){
     viewedHolder.style.backgroundImage = `url(${tapToViewURL})`;
 
 }
+
+
+
+
+(function() {
+  // Check if the current page is the homepage
+  const isHomepage = window.location.pathname === 'index.html' || window.location.pathname === '/index.html';
+
+  // Function to determine if user navigated from another page
+  const cameFromAnotherPage = document.referrer && document.referrer !== '';
+
+  if (isHomepage && cameFromAnotherPage) {
+    // Clear local storage
+    localStorage.clear();
+
+    // Clear session storage
+    sessionStorage.clear();
+
+    // Reload page bypassing cache
+    window.location.reload(true);
+  }
+})();
+
+
+
+
+
+
+
+
+
+
+
+
 
