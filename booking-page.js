@@ -1,10 +1,11 @@
+console.log( 'This is the message: ' + localStorage.getItem('previousLanguage'));
+
 let hours = '';
 let minutesStr = '';
 let ampm = '';
 
 const bookingTimeInput = document.querySelector('.booking-time-input');
 bookingTimeInput.innerText = `${hours}:${minutesStr} ${ampm} `;
-
 
 function getCurrentTimeRounded() {
   const now = new Date();
@@ -42,17 +43,581 @@ getCurrentTimeRounded();
 
 
 
-
 //curent language coming soon
 
 
 function currentLanguage() {
-    const langButton = document.querySelector('.language');
-    const savedCharacter = langButton.innerText;
-    console.log ('SAVED : ' + savedCharacter)
 
-    localStorage.setItem('savedCharacter' ,savedCharacter);
+  let previousLanguage = JSON.parse(localStorage.getItem('previousLanguage')) || 'English';
+
+
+  console.log('The Previous language is :' + previousLanguage)
+
+  if (previousLanguage == 'Arabic'){
+    
+
+        document.body.style.cssText = "background-color: #0D0D0D;  display:flex; flex-direction: column; align-items: center; margin-left: 0px; margin-right: 0px; margin-top: 0px; font-family: 'Noto Sans Arabic'; color: white; overflow-x: hidden; ";
+
+        console.log('English is current, now switching to Arabic');
+
+        const language = 'Arabic';
+        console.log('Switched Language to Arabic');
+
+
+        localStorage.setItem('previousLanguage', language);
+
+        const headerItemsContainer = document.querySelector('.header-items-container') || document.querySelector('.header-items-container-fixed')  ;
+        headerItemsContainer.style.flexDirection = 'row-reverse';
+
+        const headerLeftBox = document.querySelector(".header-left-box");
+        headerLeftBox.style.flexDirection =  'row-reverse';
+
+        const portfolioName = document.querySelector('.name');
+        portfolioName.innerHTML = 'خالد';
+
+        portfolioName.style.marginLeft = '0px';
+        portfolioName.style.marginRight = 'clamp(0px,1.86vw,20px)';
+
+        const headerRightBox = document.querySelector(".header-right-box");
+        headerRightBox.style.flexDirection =  'row-reverse';
+
+        const langButton = document.querySelector('.language');
+        langButton.innerHTML = 'EN';
+
+        const bookingTitleA = document.querySelector('.booking-introduction-title');        
+        bookingTitleA.classList.replace('booking-introduction-title' ,'booking-introduction-title-arabic')
+        bookingTitleA.innerText = 'ستحصل على مكالمة اليوم!';
+        
+
+
+        const bookingDescriptionA = document.querySelector('.booking-introduction-description');
+        bookingDescriptionA.classList.replace('booking-introduction-description' , 'booking-introduction-description-arabic')
+        bookingDescriptionA.innerText = 'لشرح لك الخدمات و تأكيد الحجز. أجب عن هذه لأسئلة لتكون المكالمة مثمرة قدر ألإمكان.';
+
+        const servicePickA = document.querySelector('.service-pick');
+        servicePickA.querySelectorAll('div').forEach(div => {
+          div.style.flexDirection = 'row-reverse';
+        });
+        
+
+
+        const servicePickTitleA = document.querySelector('.service-pick-title-translate');
+        servicePickTitleA.innerText = 'إختر خدمة';
+        servicePickTitleA.style.direction = 'rtl';
+        
+        const option1ItemContainerA = document.querySelector('.wedding-coverage-container');
+        option1ItemContainerA.classList.replace('wedding-coverage-container' , 'wedding-coverage-container-arabic');
+        option1ItemContainerA.innerHTML = " <img src='ImagesFolder/wedding-coverage-icon.png' class='option1-icon'> تغطية الأفراح";
+
+        const option2ItemContainerA = document.querySelector('.product-shoot-container');
+        option2ItemContainerA.classList.replace('product-shoot-container' , 'product-shoot-container-arabic');
+        option2ItemContainerA.innerHTML = " <img src='ImagesFolder/product-shoot-icon.png' class='option1-icon'> تصوير المنتجات";
+
+        const option3ItemContainerA = document.querySelector('.studio-shoot-container');
+        option3ItemContainerA.classList.replace('studio-shoot-container' , 'studio-shoot-container-arabic');
+        option3ItemContainerA.innerHTML = " <img src='ImagesFolder/studio-shoot-icon.png' class='option1-icon'>تصوير إستديو "; 
+        
+        const option4ItemContainerA = document.querySelector('.event-coverage-container');
+        option4ItemContainerA.classList.replace('event-coverage-container' , 'event-coverage-container-arabic');
+        option4ItemContainerA.innerHTML = " <img src='ImagesFolder/event-coverage-icon.png' class='option1-icon'> تغطية مهرجانات ";  
+        
+        const servicePickDescriptionA = document.querySelector('.service-pick-description');
+        servicePickDescriptionA.classList.replace('service-pick-description' , 'service-pick-description-arabic');
+        servicePickDescriptionA.innerHTML = 'تعتمد الأسعار على الباقات و الأحتياجات المحددة التي قد تكون لديك والتي سيتم مناقشتها في مكالمتنا بإذن الله.'
+
+        const fullNameInputPlaceHolderA = document.querySelector('.fullname-input');
+        fullNameInputPlaceHolderA.style.direction = 'rtl';
+        fullNameInputPlaceHolderA.setAttribute('placeholder' , 'الإسم الكامل (الشخصي)');
+
+        const root = document.documentElement;
+        root.style.setProperty('--pseudo-element-direction', 'left')
+        
+        const fullNameInputLabel = document.querySelector('.fullname-input-label');
+        fullNameInputLabel.innerText = 'الإسم الكامل (الشخصي)';
+
+        const fullNameInputLabelOn = document.querySelector('.fullname-input-label-on');
+
+        root.style.setProperty('--label-element-direction', 'right')
+
+
+
+        //Second Input 
+        const phoneNumberInputPlaceHolderA = document.querySelector('.use-input-phone-number');
+        phoneNumberInputPlaceHolderA.style.direction = 'rtl';
+        phoneNumberInputPlaceHolderA.setAttribute('placeholder' , 'رقم الهاتف');
+        
+        const phoneNumberInputInputLabel = document.querySelector('.use-input-phone-number-label');
+        phoneNumberInputInputLabel.innerText = 'رقم الهاتف';
+
+
+        //Third Input
+
+        const placeOfOccasionInputPlaceHolderA = document.querySelector('.place-of-occasion-input');
+        placeOfOccasionInputPlaceHolderA.style.direction = 'rtl';
+        placeOfOccasionInputPlaceHolderA.setAttribute('placeholder' , ' إسم المكان أو العنوان');
+        const placeOfOccasionInputLabelA = document.querySelector('.place-of-occasion-input-label');
+        placeOfOccasionInputLabelA.innerText = 'إسم المكان أو العنوان';
+
+        const customDropDownTitleA = document.querySelector('.custom-dropdown-title-translate');
+        customDropDownTitleA.innerText = 'عدد الحضور المتوقع'
+        customDropDownTitleA.style.direction = 'rtl';
+
+        const customDropDownOption1A = document.querySelector('.custom-dropdown-option1');
+        customDropDownOption1A.style.direction = 'rtl';
+
+        const dropDownOption1ContainerA = customDropDownOption1A.querySelector('.option1-items-container');
+        dropDownOption1ContainerA.innerText = '٥٠ أو أقل';
+
+        const customDropDownOption2A = document.querySelector('.custom-dropdown-option2');
+        customDropDownOption2A.style.direction = 'rtl';
+
+        const dropDownOption2ContainerA = customDropDownOption2A.querySelector('.option1-items-container');
+        dropDownOption2ContainerA.innerText = '٥١ إلى ١٠٠ ' ;
+
+        const customDropDownOption3A = document.querySelector('.custom-dropdown-option3');
+        customDropDownOption3A.style.direction = 'rtl';
+
+        const dropDownOption3ContainerA = customDropDownOption3A.querySelector('.option1-items-container');
+        dropDownOption3ContainerA.innerText = '١٠١ إلى ٢٠٠ ' ;
+
+        const customDropDownOption4A = document.querySelector('.custom-dropdown-option4');
+        customDropDownOption4A.style.direction = 'rtl';
+
+        const dropDownOption4ContainerA = customDropDownOption4A.querySelector('.option1-items-container');
+        dropDownOption4ContainerA.innerText = ' ٢٠١ إلى  ٣٠٠ وأكثر' ;
+        
+
+        const dateAndTimeTitleA = document.querySelector('.date-time-translate');
+        dateAndTimeTitleA.innerText = 'حدد التاريخ و الوقت';
+        dateAndTimeTitleA.style.direction = 'rtl';
+        dateAndTimeTitleA.style.UnicodeBidi = 'bidi-override';
+
+        const bookingDateAndTimeContainerA = document.querySelector('.booking-date-and-time-container');
+        bookingDateAndTimeContainerA.style.flexDirection = 'row-reverse';
+
+
+        const calendarE = document.querySelector('.booking-date-and-time-container');
+        calendarE.style.display = 'none'
+
+        const calendarA = document.querySelector('.arabic-calendar-and-time-container');
+        calendarA.classList.replace('arabic-calendar-off','arabic-calendar-on');
+
+
+        
+        const brandNameA = document.querySelector('.use-input-brand-name');
+        brandNameA.style.direction = 'rtl';
+        brandNameA.setAttribute('placeholder' , 'إسم البراند');
+        
+        const brandNameLabelA = document.querySelector('.use-input-brand-name-label');
+        brandNameLabelA.innerText = 'إسم البراند';
+
+
+        const numberOfProductsTitleA = document.querySelector('.nop-title');
+        numberOfProductsTitleA.style.direction = 'rtl';
+        numberOfProductsTitleA.innerText = 'عدد المنتجات';
+
+        const nOPDropDownOption1A = document.querySelector('.number-of-products-option1');
+        nOPDropDownOption1A.style.direction = 'rtl';
+
+        const nOPContainer1A = nOPDropDownOption1A.querySelector('.option1-items-container');
+        nOPContainer1A.innerText = '١-٢ منتجات';
+
+        const nOPDropDownOption2A = document.querySelector('.number-of-products-option2');
+        nOPDropDownOption2A.style.direction = 'rtl';
+
+        const nOPContainer2A = nOPDropDownOption2A.querySelector('.option1-items-container');
+        nOPContainer2A.innerText = '٣-٥ منتجات';
+
+        const nOPDropDownOption3A = document.querySelector('.number-of-products-option3');
+        nOPDropDownOption3A.style.direction = 'rtl';
+
+        const nOPContainer3A = nOPDropDownOption3A.querySelector('.option1-items-container');
+        nOPContainer3A.innerText = '٦-١٠ منتجات';
+
+        const nOPDropDownOption4A = document.querySelector('.number-of-products-option4');
+        nOPDropDownOption4A.style.direction = 'rtl';
+
+        const nOPContainer4A = nOPDropDownOption4A.querySelector('.option1-items-container');
+        nOPContainer4A.innerText = 'أكثر من ١٠ منتجات';
+
+        console.log('A Boss');
+
+
+        const purposeOfShootTitleA = document.querySelector('.pos-title');
+        purposeOfShootTitleA.style.direction = 'rtl';
+        purposeOfShootTitleA.innerText = 'مناسبة التصوير';
+        
+        const pOSDropDownOption1A = document.querySelector('.purpose-of-shoot-option1');
+        pOSDropDownOption1A.style.direction = 'rtl';
+        console.log('Here Boss:')
+        console.log(pOSDropDownOption1A);
+
+        const pOSContainer1A = pOSDropDownOption1A.querySelector('.option1-items-container');
+        pOSContainer1A.innerText = 'بطاقة مدنية';
+
+        const pOSDropDownOption2A = document.querySelector('.purpose-of-shoot-option2');
+        pOSDropDownOption2A.style.direction = 'rtl';
+
+        const pOSContainer2A = pOSDropDownOption2A.querySelector('.option1-items-container');
+        pOSContainer2A.innerText = 'تخرج';
+
+        const pOSDropDownOption3A = document.querySelector('.purpose-of-shoot-option3');
+        pOSDropDownOption3A.style.direction = 'rtl';
+
+        const pOSContainer3A = pOSDropDownOption3A.querySelector('.option1-items-container');
+        pOSContainer3A.innerText = 'فرح';
+
+        const pOSDropDownOption4A = document.querySelector('.purpose-of-shoot-option4');
+        pOSDropDownOption4A.style.direction = 'rtl';
+
+        const pOSContainer4A = pOSDropDownOption4A.querySelector('.option1-items-container');
+        pOSContainer4A.innerText = 'مناسبة أخرى';
+
+
+        const eventHostNameA = document.querySelector('.event-coverage-use-input');
+        eventHostNameA.style.direction = 'rtl';
+        eventHostNameA.setAttribute('placeholder' , 'إسم مؤسس المهرجان (الشركة)');
+        
+        const eventHostNameLabelA = document.querySelector('.event-coverage-use-input-label');
+        eventHostNameLabelA.innerText = 'إسم مؤسس المهرجان (الشركة)';
+
+        const eventLocationA = document.querySelector('.event-coverage-location');
+        eventLocationA.style.direction = 'rtl';
+        eventLocationA.setAttribute('placeholder' , 'مكان المهرجان');
+        
+        const eventLocationLabelA = document.querySelector('.event-coverage-location-label');
+        eventLocationLabelA.innerText = 'مكان المهرجان';
+
+        const eventDurationA = document.querySelector('.use-input-event-duration');
+        eventDurationA.style.direction = 'rtl';
+        eventDurationA.setAttribute('placeholder' , 'مدة المهرجان الزمنية');
+        
+        const eventDurationLabelA = document.querySelector('.use-input-event-duration-label');
+        eventDurationLabelA.innerText = 'مدة المهرجان الزمنية';
+
+
+        const eventExpectedAmountOfVisitorsTitleA = document.querySelector('.eov2-title');
+        eventExpectedAmountOfVisitorsTitleA.style.direction = 'rtl';
+        eventExpectedAmountOfVisitorsTitleA.innerText = 'عدد الحضور المتوقع';
+        
+        const eOVDropDownOption1A = document.querySelector('.expected-number-of-visitors2-option1');
+        eOVDropDownOption1A.style.direction = 'rtl';
+
+        const eOVContainer1A = eOVDropDownOption1A.querySelector('.option1-items-container');
+        eOVContainer1A.innerText = '٥٠ أو أقل';
+
+        const eOVDropDownOption2A = document.querySelector('.expected-number-of-visitors2-option2');
+        eOVDropDownOption2A.style.direction = 'rtl';
+
+        const eOVContainer2A = eOVDropDownOption2A.querySelector('.option1-items-container');
+        eOVContainer2A.innerText = '٥١ إلى ١٠٠ ' ;
+
+        const eOVDropDownOption3A = document.querySelector('.expected-number-of-visitors2-option3');
+        eOVDropDownOption3A.style.direction = 'rtl';
+
+        const eOVContainer3A = eOVDropDownOption3A.querySelector('.option1-items-container');
+        eOVContainer3A.innerText = '١٠١ إلى ٢٠٠ ' ;
+
+        const eOVDropDownOption4A = document.querySelector('.expected-number-of-visitors2-option4');
+        eOVDropDownOption4A.style.direction = 'rtl';
+
+        const eOVContainer4A = eOVDropDownOption4A.querySelector('.option1-items-container');
+        eOVContainer4A.innerText = ' ٢٠١ إلى  ٣٠٠ وأكثر' ;
+
+
+        console.log('English is current, now switching to Arabic');
+
+
+        const requiredMessage = document.querySelector('p.custom-error-message.required');
+        requiredMessage.style.direction = 'rtl';
+        requiredMessage.style.justifySelf = 'end';
+        requiredMessage.innerHTML = '<img src="warning.png" class="warning"> لطفاَ, أكمل هذا الركن المطلوب.';
+        
+
+        language = 'Arabic';
+        console.log('Switched Language to Arabic');
+
+
+
+        localStorage.setItem('previousLanguage', language);
+  } else if (previousLanguage == 'English'){
+    
+
+        const language = 'English';
+        console.log('Switched Language to English');
+
+
+        localStorage.setItem('previousLanguage', language);
+
+        document.body.style.cssText = "background-color: #0D0D0D; display: flex;flex-direction: column; align-items: center; margin-left: 0px; margin-right: 0px; margin-top: 0px; font-family: Inter; color: white; overflow-x: hidden;";
+
+        const headerItemsContainer = document.querySelector('.header-items-container') || document.querySelector('.header-items-container-fixed') ;
+        headerItemsContainer.style.flexDirection = 'row';
+
+        const headerLeftBox = document.querySelector(".header-left-box");
+        headerLeftBox.style.flexDirection =  'row';
+
+        const portfolioName = document.querySelector('.name');
+        portfolioName.innerHTML = 'Khalid';
+
+        portfolioName.style.marginRight = '0px';
+        portfolioName.style.marginLeft = 'clamp(0px,1.86vw,20px)';
+
+        headerRightBox = document.querySelector(".header-right-box");
+        headerRightBox.style.flexDirection =  'row';
+
+              
+        const langButton = document.querySelector('.language');
+        langButton.innerHTML = 'ع';
+
+
+        const bookingTitle = document.querySelector('.booking-introduction-title-arabic');        
+        bookingTitle.classList.replace('booking-introduction-title-arabic' ,'booking-introduction-title')
+        bookingTitle.innerText = 'You Will Get A Call Today!';
+        
+
+
+        const bookingDescription = document.querySelector('.booking-introduction-description-arabic');
+        bookingDescription.classList.replace('booking-introduction-description-arabic' , 'booking-introduction-description')
+        bookingDescription.innerText = 'To inform you about the service and confirm the booking. Answer these questions to make it as productive as possible!';
+
+        const servicePick = document.querySelector('.service-pick');
+        servicePick.querySelectorAll('div').forEach(div => {
+          div.style.flexDirection = 'row';
+        });
+        
+
+
+        const servicePickTitle = document.querySelector('.service-pick-title-translate');
+        servicePickTitle.innerText = 'Pick a service';
+        servicePickTitle.style.direction = 'ltr';
+        
+        const option1ItemContainer = document.querySelector('.wedding-coverage-container-arabic');
+        option1ItemContainer.classList.replace('wedding-coverage-container-arabic' , 'wedding-coverage-container');
+        option1ItemContainer.innerHTML = " <img src='ImagesFolder/wedding-coverage-icon.png' class='option1-icon'>  Wedding Coverage";
+
+        const option2ItemContainer = document.querySelector('.product-shoot-container-arabic');
+        option2ItemContainer.classList.replace('product-shoot-container-arabic' , 'product-shoot-container');
+        option2ItemContainer.innerHTML = " <img src='ImagesFolder/product-shoot-icon.png' class='option1-icon'>  Product Shoot";
+
+        const option3ItemContainer = document.querySelector('.studio-shoot-container-arabic');
+        option3ItemContainer.classList.replace('studio-shoot-container-arabic' , 'studio-shoot-container');
+        option3ItemContainer.innerHTML = " <img src='ImagesFolder/studio-shoot-icon.png' class='option1-icon'> Studio Shoot "; 
+        
+        const option4ItemContainer = document.querySelector('.event-coverage-container-arabic');
+        option4ItemContainer.classList.replace('event-coverage-container-arabic' , 'event-coverage-container');
+        option4ItemContainer.innerHTML = " <img src='ImagesFolder/event-coverage-icon.png' class='option1-icon'>  Event Coverage ";  
+        
+        const servicePickDescription = document.querySelector('.service-pick-description-arabic');
+        servicePickDescription.classList.replace('service-pick-description-arabic' , 'service-pick-description');
+        servicePickDescription.innerHTML = 'Different pricing depends on packages and specific needs you may have. which will be discussed in our call.'
+
+        const fullNameInputPlaceHolder = document.querySelector('.fullname-input');
+        fullNameInputPlaceHolder.style.direction = 'ltr';
+        fullNameInputPlaceHolder.setAttribute('placeholder' , 'Fullname (Personal)');
+
+        const root = document.documentElement;
+        root.style.setProperty('--pseudo-element-direction', 'right')
+        
+        const fullNameInputLabel = document.querySelector('.fullname-input-label');
+        fullNameInputLabel.innerText = 'Fullname (Personal)';
+
+        const fullNameInputLabelOn = document.querySelector('.fullname-input-label-on');
+
+        root.style.setProperty('--label-element-direction', 'left');
+
+        //Second Input 
+        const phoneNumberInputPlaceHolder = document.querySelector('.use-input-phone-number');
+        phoneNumberInputPlaceHolder.style.direction = 'ltr';
+        phoneNumberInputPlaceHolder.setAttribute('placeholder' , 'Phone Number');
+        
+        const phoneNumberInputInputLabel = document.querySelector('.use-input-phone-number-label');
+        phoneNumberInputInputLabel.innerText = 'Phone Number';
+
+        //Third Input
+
+        const placeOfOccasionInputPlaceHolder = document.querySelector('.place-of-occasion-input');
+        placeOfOccasionInputPlaceHolder.style.direction = 'ltr';
+        placeOfOccasionInputPlaceHolder.setAttribute('placeholder' , 'Place of Occasion');
+        const placeOfOccasionInputLabel = document.querySelector('.place-of-occasion-input-label');
+        placeOfOccasionInputLabel.innerText = 'Place of Occasion';
+
+        const customDropDownTitle = document.querySelector('.custom-dropdown-title-translate');
+        customDropDownTitle.innerText = 'Expected Number Of Visitors'
+        customDropDownTitle.style.direction = 'ltr';
+
+        const customDropDownOption1 = document.querySelector('.custom-dropdown-option1');
+        customDropDownOption1.style.direction = 'ltr';
+
+        const dropDownOption1Container = customDropDownOption1.querySelector('.option1-items-container');
+        dropDownOption1Container.innerText = 'Under 50';
+
+        const customDropDownOption2 = document.querySelector('.custom-dropdown-option2');
+        customDropDownOption2.style.direction = 'ltr';
+
+        const dropDownOption2Container = customDropDownOption2.querySelector('.option1-items-container');
+        dropDownOption2Container.innerText = '51-100' ;
+
+        const customDropDownOption3 = document.querySelector('.custom-dropdown-option3');
+        customDropDownOption3.style.direction = 'ltr';
+
+        const dropDownOption3Container = customDropDownOption3.querySelector('.option1-items-container');
+        dropDownOption3Container.innerText = '101-200' ;
+
+        const customDropDownOption4 = document.querySelector('.custom-dropdown-option4');
+        customDropDownOption4.style.direction = 'ltr';
+
+        const dropDownOption4Container = customDropDownOption4.querySelector('.option1-items-container');
+        dropDownOption4Container.innerText = '200-300 or more' ;
+        
+        const dateAndTimeTitle = document.querySelector('.date-time-translate');
+        dateAndTimeTitle.innerText = 'Specify a date & time';
+        dateAndTimeTitle.style.direction = 'ltr';
+
+        const bookingDateAndTimeContainer = document.querySelector('.booking-date-and-time-container');
+        bookingDateAndTimeContainer.style.flexDirection = 'row';
+
+
+        const calendarE = document.querySelector('.booking-date-and-time-container');
+        calendarE.style.display = 'flex'
+
+        const calendarA = document.querySelector('.arabic-calendar-and-time-container');
+        calendarA.classList.replace('arabic-calendar-on','arabic-calendar-off');
+        
+        const brandName = document.querySelector('.use-input-brand-name');
+        brandName.style.direction = 'ltr';
+        brandName.setAttribute('placeholder' , 'Brand Name');
+        
+        const brandNameLabel = document.querySelector('.use-input-brand-name-label');
+        brandNameLabel.innerText = 'Brand Name';
+
+        const numberOfProductsTitle = document.querySelector('.nop-title');
+        numberOfProductsTitle.style.direction = 'ltr';
+        numberOfProductsTitle.innerText = 'Number Of Products';
+
+        const nOPDropDownOption1 = document.querySelector('.number-of-products-option1');
+        nOPDropDownOption1.style.direction = 'ltr';
+
+        const nOPContainer1 = nOPDropDownOption1.querySelector('.option1-items-container');
+        nOPContainer1.innerText = '1-2 Products';
+
+        const nOPDropDownOption2 = document.querySelector('.number-of-products-option2');
+        nOPDropDownOption2.style.direction = 'ltr';
+
+        const nOPContainer2 = nOPDropDownOption2.querySelector('.option1-items-container');
+        nOPContainer2.innerText = '3-5 Products';
+
+        const nOPDropDownOption3 = document.querySelector('.number-of-products-option3');
+        nOPDropDownOption3.style.direction = 'ltr';
+
+        const nOPContainer3 = nOPDropDownOption3.querySelector('.option1-items-container');
+        nOPContainer3.innerText = '6-10 Products';
+
+        const nOPDropDownOption4 = document.querySelector('.number-of-products-option4');
+        nOPDropDownOption4.style.direction = 'ltr';
+
+        const nOPContainer4 = nOPDropDownOption4.querySelector('.option1-items-container');
+        nOPContainer4.innerText = 'More Than 10';
+
+        const purposeOfShootTitle = document.querySelector('.pos-title');
+        purposeOfShootTitle.style.direction = 'ltr';
+        purposeOfShootTitle.innerText = 'Purpose of Shoot';
+        
+        const pOSDropDownOption1 = document.querySelector('.purpose-of-shoot-option1');
+        pOSDropDownOption1.style.direction = 'ltr';
+
+        const pOSContainer1 = pOSDropDownOption1.querySelector('.option1-items-container');
+        pOSContainer1.innerText = 'Civil ID Photo';
+
+        const pOSDropDownOption2 = document.querySelector('.purpose-of-shoot-option2');
+        pOSDropDownOption2.style.direction = 'ltr';
+
+        const pOSContainer2 = pOSDropDownOption2.querySelector('.option1-items-container');
+        pOSContainer2.innerText = 'Graduation';
+
+        const pOSDropDownOption3 = document.querySelector('.purpose-of-shoot-option3');
+        pOSDropDownOption3.style.direction = 'ltr';
+
+        const pOSContainer3 = pOSDropDownOption3.querySelector('.option1-items-container');
+        pOSContainer3.innerText = 'Wedding';
+
+        const pOSDropDownOption4 = document.querySelector('.purpose-of-shoot-option4');
+        pOSDropDownOption4.style.direction = 'ltr';
+
+        const pOSContainer4 = pOSDropDownOption4.querySelector('.option1-items-container');
+        pOSContainer4.innerText = 'Other';
+
+        const eventHostName = document.querySelector('.event-coverage-use-input');
+        eventHostName.style.direction = 'ltr';
+        eventHostName.setAttribute('placeholder' , 'Event Host Name (Company)');
+        
+        const eventHostNameLabel = document.querySelector('.event-coverage-use-input-label');
+        eventHostNameLabel.innerText = 'Event Host Name (Company)';
+
+        const eventLocation = document.querySelector('.event-coverage-location');
+        eventLocation.style.direction = 'ltr';
+        eventLocation.setAttribute('placeholder' , 'Event Location');
+        
+        const eventLocationLabel = document.querySelector('.event-coverage-location-label');
+        eventLocationLabel.innerText = 'Event Location';
+
+        const eventDuration = document.querySelector('.use-input-event-duration');
+        eventDuration.style.direction = 'ltr';
+        eventDuration.setAttribute('placeholder' , 'Event Duration');
+        
+        const eventDurationLabel = document.querySelector('.use-input-event-duration-label');
+        eventDurationLabel.innerText = 'Event Duration';
+
+
+        const eventExpectedAmountOfVisitorsTitle = document.querySelector('.eov2-title');
+        eventExpectedAmountOfVisitorsTitle.style.direction = 'ltr';
+        eventExpectedAmountOfVisitorsTitle.innerText = 'Expected Number Of Visitors';
+        
+        const eOVDropDownOption1 = document.querySelector('.expected-number-of-visitors2-option1');
+        eOVDropDownOption1.style.direction = 'ltr';
+
+        const eOVContainer1 = eOVDropDownOption1.querySelector('.option1-items-container');
+        eOVContainer1.innerText = 'Under 50';
+
+        const eOVDropDownOption2 = document.querySelector('.expected-number-of-visitors2-option2');
+        eOVDropDownOption2.style.direction = 'ltr';
+
+        const eOVContainer2 = eOVDropDownOption2.querySelector('.option1-items-container');
+        eOVContainer2.innerText = '51-100' ;
+
+        const eOVDropDownOption3 = document.querySelector('.expected-number-of-visitors2-option3');
+        eOVDropDownOption3.style.direction = 'ltr';
+
+        const eOVContainer3 = eOVDropDownOption3.querySelector('.option1-items-container');
+        eOVContainer3.innerText = '101-200' ;
+
+        const eOVDropDownOption4 = document.querySelector('.expected-number-of-visitors2-option4');
+        eOVDropDownOption4.style.direction = 'ltr';
+
+        const eOVContainer4 = eOVDropDownOption4.querySelector('.option1-items-container');
+        eOVContainer4.innerText = '200-300 or more' ;
+
+
+        console.log('English is current, now switching to Arabic');
+
+
+        const requiredMessage = document.querySelector('p.custom-error-message.required');
+        requiredMessage.style.direction = 'ltr';
+        requiredMessage.style.justifySelf = 'start';
+        requiredMessage.innerHTML = '<p class="custom-error-message required"> <img src="warning.png" class="warning"> This is a required field, kindly complete it to continue.</p>';
+
+        langButton.innerHTML = 'ع';
+
+        language = 'English';
+        console.log('Switched Language to English');
+
+
+
+  }
+  
 };
+
+
 
 function switchLanguage(){
 
@@ -90,7 +655,6 @@ function switchLanguage(){
 
         const langButton = document.querySelector('.language');
         langButton.innerHTML = 'EN';
-        currentLanguage()
 
         const bookingTitleA = document.querySelector('.booking-introduction-title');        
         bookingTitleA.classList.replace('booking-introduction-title' ,'booking-introduction-title-arabic')
@@ -383,7 +947,6 @@ function switchLanguage(){
               
         const langButton = document.querySelector('.language');
         langButton.innerHTML = 'ع';
-        currentLanguage();
 
 
         const bookingTitle = document.querySelector('.booking-introduction-title-arabic');        
@@ -636,7 +1199,9 @@ function switchLanguage(){
           
           
           
-          
+const pageLanguage = localStorage.getItem('langKey');
+
+console.log('Lang key is: ' + pageLanguage)
           
           
           
@@ -1347,6 +1912,7 @@ if (!document.querySelector('.number-of-products').querySelector('picked-option'
 
       // Check for required
       if (input.required && !input.value.trim()) {
+        const langButton = document.querySelector('.language');
         if (langButton.innerText == 'ع'){
                 messageContainer.innerHTML = `
                   <p class="custom-error-message required">
@@ -1507,6 +2073,7 @@ if (!document.querySelector('.number-of-products').querySelector('picked-option'
 
       // Check for required
       if (input.required && !input.value.trim()) {
+        const langButton = document.querySelector('.language');
         if (langButton.innerText == 'ع'){
                 messageContainer.innerHTML = `
                   <p class="custom-error-message required">
@@ -1638,6 +2205,7 @@ if (!document.querySelector('.number-of-products').querySelector('picked-option'
 
       // Check for required
       if (input.required && !input.value.trim()) {
+                const langButton = document.querySelector('.language');
           if (langButton.innerText == 'ع'){
                   messageContainer.innerHTML = `
                     <p class="custom-error-message required">
@@ -1779,6 +2347,7 @@ if (!document.querySelector('.number-of-products').querySelector('picked-option'
 
       // Check for required
       if (input.required && !input.value.trim()) {
+        const langButton = document.querySelector('.language');
           if (langButton.innerText == 'ع'){
                   messageContainer.innerHTML = `
                     <p class="custom-error-message required">
@@ -2845,31 +3414,13 @@ getCurrentTimeRounded();
 
 
 
-function getCurrentLanguage(){
-  const savedOne = localStorage.getItem('savedCharacter');
-  if(savedOne == 'ع'){
-
-    return
-
-  }else if(savedOne == 'EN'){
-    switchLanguage();
-  }
-}
-
-
-
-setTimeout(() => {
-getCurrentLanguage();}, 100);
 
 
 
 
 
 
-  const brandNameInput = document.querySelector('.use-input-brand-name').value.trim();
-  const eventHostNameInput = document.querySelector('.event-coverage-use-input').value.trim();
-  const eventLocationInput = document.querySelector('.event-coverage-location').value.trim();
-  const eventCoverageDuration = document.querySelector('.use-input-event-duration').value.trim();
+
 
 document.querySelector('.booking-submit-button').addEventListener('click', function(event) {
 
@@ -2878,6 +3429,8 @@ const serviceBasedContainer = document.querySelector('.service-based-container-o
 const langButton = document.querySelector('.language');
 
 if (serviceBasedContainer.classList.contains('service1-based-container')){
+  const langButton = document.querySelector('.language');
+
  
   const fullName = document.querySelector('.fullname-input').value.trim();
   const phoneNumber = document.querySelector('.use-input-phone-number').value.trim();
@@ -2893,7 +3446,14 @@ alert('Kindly, enter the required information first.');}else if (langButton.inne
     window.location.href='the-thank-you-page.html'; 
   }
 } else if (serviceBasedContainer.classList.contains('service2-based-container')){
+  const langButton = document.querySelector('.language');
+  const fullName = document.querySelector('.fullname-input').value.trim();
+  const phoneNumber = document.querySelector('.use-input-phone-number').value.trim();
+  const brandNameInput = document.querySelector('.use-input-brand-name').value.trim();
+
+
     if (fullName === '' || phoneNumber === '' || brandNameInput === ''){
+      
 if (langButton.innerText == 'ع'){
 alert('Kindly, enter the required information first.');}else if (langButton.innerText == 'EN'){
   alert('لطفاَ, إملئ البيانات المطلوبة اولاَ.');
@@ -2903,7 +3463,11 @@ alert('Kindly, enter the required information first.');}else if (langButton.inne
     window.location.href='the-thank-you-page.html'; 
   }
 }else if  (serviceBasedContainer.classList.contains('service3-based-container')){
+  const fullName = document.querySelector('.fullname-input').value.trim();
+  const phoneNumber = document.querySelector('.use-input-phone-number').value.trim();
+
     if (fullName === '' || phoneNumber === ''){
+            const langButton = document.querySelector('.language');
 if (langButton.innerText == 'ع'){
 alert('Kindly, enter the required information first.');}else if (langButton.innerText == 'EN'){
   alert('لطفاَ, إملئ البيانات المطلوبة اولاَ.');
@@ -2913,7 +3477,16 @@ alert('Kindly, enter the required information first.');}else if (langButton.inne
     window.location.href='the-thank-you-page.html'; 
   }
 }else if  (serviceBasedContainer.classList.contains('service4-based-container')){
+  const langButton = document.querySelector('.language');
+  const fullName = document.querySelector('.fullname-input').value.trim();
+  const phoneNumber = document.querySelector('.use-input-phone-number').value.trim();
+  const eventHostNameInput = document.querySelector('.event-coverage-use-input').value.trim();
+  const eventLocationInput = document.querySelector('.event-coverage-location').value.trim();
+  const eventCoverageDuration = document.querySelector('.use-input-event-duration').value.trim();
+
     if (fullName === '' || phoneNumber === '' || eventCoverageDuration === ''  || eventHostNameInput === '' || eventLocationInput === ''){
+const langButton = document.querySelector('.language');
+
 if (langButton.innerText == 'ع'){
 alert('Kindly, enter the required information first.');}else if (langButton.innerText == 'EN'){
   alert('لطفاَ, إملئ البيانات المطلوبة اولاَ.');
@@ -2924,6 +3497,11 @@ alert('Kindly, enter the required information first.');}else if (langButton.inne
   }}
 
 });
+
+
+
+
+currentLanguage();
 
 
 
