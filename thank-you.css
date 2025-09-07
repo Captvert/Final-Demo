@@ -182,7 +182,6 @@ body::-webkit-scrollbar-thumb:hover{
     flex-direction: column;
     width: clamp(0px, 43.255814vw, 219.12px);
     height: clamp(0px, 58.6046512vw, 297.22px);
-    overflow-wrap: normal !important;
 }
 
 .lock-screen-time-large{
@@ -809,6 +808,7 @@ font-family: Inter;
 .black-cta-modified:hover {
 transform: scale(1.2);
 }
+
 
 
 
