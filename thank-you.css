@@ -263,6 +263,7 @@ body::-webkit-scrollbar-thumb:hover{
     white-space: nowrap !important;
     background-color: brown;
     width: 100px;
+    flex-shrink: 0;
 }
 
 .email-time{
@@ -275,6 +276,7 @@ body::-webkit-scrollbar-thumb:hover{
     white-space: nowrap !important;
     background-color: brown;
     width: 100px;
+    flex-shrink: 0;
 }
 
 
@@ -808,6 +810,7 @@ font-family: Inter;
 .black-cta-modified:hover {
 transform: scale(1.2);
 }
+
 
 
 
