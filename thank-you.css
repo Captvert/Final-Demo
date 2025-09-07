@@ -227,6 +227,7 @@ body::-webkit-scrollbar-thumb:hover{
     color: black;
     align-self: end;
     line-height: 1.7;
+    background-color: red;
 }
 
 .email-sender-and-time{
@@ -249,7 +250,7 @@ body::-webkit-scrollbar-thumb:hover{
 .email-subject{
     font-size: clamp(0px, 0.6vw, 3.04px);
     font-weight: 500;
-    width: 100px;
+    background-color: yellow;
 }
 
 .email-time{
@@ -259,6 +260,7 @@ body::-webkit-scrollbar-thumb:hover{
 .email-message{
     font-size: clamp(0px, 0.6vw, 3.04px) ;
     font-weight: 300;
+    background-color: yellow;
 }
 
 
