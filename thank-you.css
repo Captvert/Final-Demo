@@ -203,7 +203,6 @@ body::-webkit-scrollbar-thumb:hover{
     margin-left: clamp(0px, 13vw, 65.91px);
     top: 0vw;
     position: relative;
-    overflow-wrap: normal !important;
 }
 
 .lock-screen-email-notification-arabic {
@@ -218,7 +217,6 @@ body::-webkit-scrollbar-thumb:hover{
     margin-top: 0px;
     top: 0vw;
     position: relative;
-    overflow-wrap: normal !important;
 }
 
 .email-content{
@@ -808,6 +806,7 @@ font-family: Inter;
 .black-cta-modified:hover {
 transform: scale(1.2);
 }
+
 
 
 
