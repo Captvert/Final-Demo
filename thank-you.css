@@ -16,7 +16,7 @@
 
 body{
     font-family: Inter;
-    background-color: red !important;
+    background-color: green !important;
 }
 
 body::-webkit-scrollbar {
@@ -252,7 +252,6 @@ body::-webkit-scrollbar-thumb:hover{
 .email-subject{
     font-size: clamp(0px, 0.6vw, 3.04px);
     font-weight: 500;
-    white-space: nowrap !important;
     background-color: brown;
     width: 100px;
     flex-shrink: 0;
@@ -266,7 +265,6 @@ body::-webkit-scrollbar-thumb:hover{
 .email-message{
     font-size: clamp(0px, 0.6vw, 3.04px) ;
     font-weight: 300;
-    overflow-wrap: normal !important;
     background-color: brown;
     width: 100px;
     flex-shrink: 0;
@@ -804,6 +802,7 @@ font-family: Inter;
 .black-cta-modified:hover {
 transform: scale(1.2);
 }
+
 
 
 
