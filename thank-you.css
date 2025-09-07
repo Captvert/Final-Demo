@@ -184,7 +184,6 @@ body::-webkit-scrollbar-thumb:hover{
     height: clamp(0px, 58.6046512vw, 297.22px);
     overflow-wrap: normal !important;
     word-break: normal !important; /* default, avoids breaking words arbitrarily */
-    white-space: nowrap !important; /* prevents wrapping at whitespace */    background-color: yellow;
 }
 
 .lock-screen-time-large{
@@ -208,7 +207,6 @@ body::-webkit-scrollbar-thumb:hover{
     position: relative;
     overflow-wrap: normal !important;
     word-break: normal !important; /* default, avoids breaking words arbitrarily */
-    white-space: nowrap !important; /* prevents wrapping at whitespace */    background-color: blue;
 
 }
 
@@ -226,7 +224,6 @@ body::-webkit-scrollbar-thumb:hover{
     position: relative;
     overflow-wrap: normal !important;
     word-break: normal !important; /* default, avoids breaking words arbitrarily */
-    white-space: nowrap !important; /* prevents wrapping at whitespace */    background-color: blue;
 }
 
 .email-content{
@@ -242,7 +239,6 @@ body::-webkit-scrollbar-thumb:hover{
     background-color: orange;
     overflow-wrap: normal !important;
     word-break: normal !important; /* default, avoids breaking words arbitrarily */
-    white-space: nowrap !important; /* prevents wrapping at whitespace */
 }
 
 .email-sender-and-time{
@@ -272,7 +268,6 @@ body::-webkit-scrollbar-thumb:hover{
     display: block;
     overflow-wrap: normal !important;
     word-break: normal !important; /* default, avoids breaking words arbitrarily */
-    white-space: nowrap !important; /* prevents wrapping at whitespace */
 }
 
 .email-time{
@@ -284,7 +279,6 @@ body::-webkit-scrollbar-thumb:hover{
     font-weight: 300;
     overflow-wrap: normal !important;
     word-break: normal !important; /* default, avoids breaking words arbitrarily */
-    white-space: nowrap !important; /* prevents wrapping at whitespace */    
     background-color: brown;
     width: 100px;
     flex-shrink: 0;
@@ -822,6 +816,7 @@ font-family: Inter;
 .black-cta-modified:hover {
 transform: scale(1.2);
 }
+
 
 
 
