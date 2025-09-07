@@ -224,7 +224,7 @@ body::-webkit-scrollbar-thumb:hover{
     flex-direction: column;
     justify-content: center;
     width: initial ;
-    color: black;
+    color: red !important;
     align-self: end;
     line-height: 1.7;
 }
@@ -793,6 +793,7 @@ font-family: Inter;
 .black-cta-modified:hover {
 transform: scale(1.2);
 }
+
 
 
 
