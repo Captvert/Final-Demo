@@ -230,7 +230,6 @@ body::-webkit-scrollbar-thumb:hover{
     align-self: end;
     line-height: 1.7;
     background-color: orange;
-    overflow-wrap: normal !important;
 }
 
 .email-sender-and-time{
@@ -258,7 +257,6 @@ body::-webkit-scrollbar-thumb:hover{
     width: 100px;
     flex-shrink: 0;
     display: block;
-    overflow-wrap: normal !important;
 }
 
 .email-time{
@@ -806,6 +804,7 @@ font-family: Inter;
 .black-cta-modified:hover {
 transform: scale(1.2);
 }
+
 
 
 
