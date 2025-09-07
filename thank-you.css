@@ -4,7 +4,7 @@
     padding-right: clamp(0px , 1.5vw , 10.21px);
     height: clamp(0px, 6.51162791vw, 33.02px);
     background-color: #DBA622;
-    border-radius:  clamp(0px, 0.69767442vw, 3.54px)   ;
+    border-radius:  clamp(0px, 0.69767442vw, 3.54px) ;
     font-size: clamp(0px,4.18604651vw,21.2233px);
     font-weight: bold;
     display: flex;
@@ -16,7 +16,6 @@
 
 body{
     font-family: Inter;
-    background-color: purple !important;
 }
 
 body::-webkit-scrollbar {
@@ -48,8 +47,6 @@ body::-webkit-scrollbar-thumb:hover{
     rgba(94, 94, 93, 0.6) 100%
   );
 }
-
-
 
 .positive-call-comment{
     font-weight: 350;
@@ -202,8 +199,7 @@ body::-webkit-scrollbar-thumb:hover{
     width: clamp(0px, 18vw, 91.26px);
     margin-left: clamp(0px, 13vw, 65.91px);
     top: 0vw;
-    position: relative
-    backgroun-color: lightblue;
+    position: relative;
 }
 
 .lock-screen-email-notification-arabic {
@@ -218,7 +214,6 @@ body::-webkit-scrollbar-thumb:hover{
     margin-top: 0px;
     top: 0vw;
     position: relative;
-    background-color: lightblue;
 }
 
 .email-content{
@@ -227,11 +222,10 @@ body::-webkit-scrollbar-thumb:hover{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: clamp(0px, 18vw, 91.26px);
-    color: red !important;
+    width: 80%;
+    color: black;
     align-self: end;
     line-height: 1.7;
-    background-color: orange !important;
 }
 
 .email-sender-and-time{
@@ -254,9 +248,7 @@ body::-webkit-scrollbar-thumb:hover{
 .email-subject{
     font-size: clamp(0px, 0.6vw, 3.04px);
     font-weight: 500;
-    background-color: brown;
-    flex-shrink: 0;
-    display: block;
+    white-space: nowrap !important;
 }
 
 .email-time{
@@ -266,9 +258,6 @@ body::-webkit-scrollbar-thumb:hover{
 .email-message{
     font-size: clamp(0px, 0.6vw, 3.04px) ;
     font-weight: 300;
-    background-color: brown;
-    flex-shrink: 0;
-    display: block;
 }
 
 
@@ -802,24 +791,6 @@ font-family: Inter;
 .black-cta-modified:hover {
 transform: scale(1.2);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
