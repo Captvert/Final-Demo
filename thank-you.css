@@ -182,8 +182,9 @@ body::-webkit-scrollbar-thumb:hover{
     flex-direction: column;
     width: clamp(0px, 43.255814vw, 219.12px);
     height: clamp(0px, 58.6046512vw, 297.22px);
-    white-space: nowrap !important;
-    background-color: yellow;
+    overflow-wrap: normal !important;
+    word-break: normal !important; /* default, avoids breaking words arbitrarily */
+    white-space: nowrap !important; /* prevents wrapping at whitespace */    background-color: yellow;
 }
 
 .lock-screen-time-large{
@@ -205,8 +206,9 @@ body::-webkit-scrollbar-thumb:hover{
     margin-left: clamp(0px, 13vw, 65.91px);
     top: 0vw;
     position: relative;
-    white-space: nowrap !important;
-    background-color: blue;
+    overflow-wrap: normal !important;
+    word-break: normal !important; /* default, avoids breaking words arbitrarily */
+    white-space: nowrap !important; /* prevents wrapping at whitespace */    background-color: blue;
 
 }
 
@@ -222,8 +224,9 @@ body::-webkit-scrollbar-thumb:hover{
     margin-top: 0px;
     top: 0vw;
     position: relative;
-    white-space: nowrap !important;
-    background-color: blue;
+    overflow-wrap: normal !important;
+    word-break: normal !important; /* default, avoids breaking words arbitrarily */
+    white-space: nowrap !important; /* prevents wrapping at whitespace */    background-color: blue;
 }
 
 .email-content{
@@ -819,6 +822,7 @@ font-family: Inter;
 .black-cta-modified:hover {
 transform: scale(1.2);
 }
+
 
 
 
