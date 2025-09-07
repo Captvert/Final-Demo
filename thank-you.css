@@ -16,7 +16,6 @@
 
 body{
     font-family: Inter;
-    background-color: red !important;
 }
 
 body::-webkit-scrollbar {
@@ -227,7 +226,6 @@ body::-webkit-scrollbar-thumb:hover{
     color: black;
     align-self: end;
     line-height: 1.7;
-    background-color: red;
     overflow-wrap: normal;
     word-break: normal; /* default, avoids breaking words arbitrarily */
     white-space: nowrap; /* prevents wrapping at whitespace */
@@ -253,7 +251,6 @@ body::-webkit-scrollbar-thumb:hover{
 .email-subject{
     font-size: clamp(0px, 0.6vw, 3.04px);
     font-weight: 500;
-    background-color: yellow;
     overflow-wrap: normal;
     word-break: normal; /* default, avoids breaking words arbitrarily */
     white-space: nowrap; /* prevents wrapping at whitespace */
@@ -266,7 +263,6 @@ body::-webkit-scrollbar-thumb:hover{
 .email-message{
     font-size: clamp(0px, 0.6vw, 3.04px) ;
     font-weight: 300;
-    background-color: yellow;
     width: 100px;
     overflow-wrap: normal;
     word-break: normal; /* default, avoids breaking words arbitrarily */
@@ -804,6 +800,7 @@ font-family: Inter;
 .black-cta-modified:hover {
 transform: scale(1.2);
 }
+
 
 
 
