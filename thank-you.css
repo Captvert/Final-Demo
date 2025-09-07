@@ -183,7 +183,6 @@ body::-webkit-scrollbar-thumb:hover{
     width: clamp(0px, 43.255814vw, 219.12px);
     height: clamp(0px, 58.6046512vw, 297.22px);
     overflow-wrap: normal !important;
-    word-break: normal !important; /* default, avoids breaking words arbitrarily */
 }
 
 .lock-screen-time-large{
@@ -206,8 +205,6 @@ body::-webkit-scrollbar-thumb:hover{
     top: 0vw;
     position: relative;
     overflow-wrap: normal !important;
-    word-break: normal !important; /* default, avoids breaking words arbitrarily */
-
 }
 
 .lock-screen-email-notification-arabic {
@@ -223,7 +220,6 @@ body::-webkit-scrollbar-thumb:hover{
     top: 0vw;
     position: relative;
     overflow-wrap: normal !important;
-    word-break: normal !important; /* default, avoids breaking words arbitrarily */
 }
 
 .email-content{
@@ -238,7 +234,6 @@ body::-webkit-scrollbar-thumb:hover{
     line-height: 1.7;
     background-color: orange;
     overflow-wrap: normal !important;
-    word-break: normal !important; /* default, avoids breaking words arbitrarily */
 }
 
 .email-sender-and-time{
@@ -267,7 +262,6 @@ body::-webkit-scrollbar-thumb:hover{
     flex-shrink: 0;
     display: block;
     overflow-wrap: normal !important;
-    word-break: normal !important; /* default, avoids breaking words arbitrarily */
 }
 
 .email-time{
@@ -278,7 +272,6 @@ body::-webkit-scrollbar-thumb:hover{
     font-size: clamp(0px, 0.6vw, 3.04px) ;
     font-weight: 300;
     overflow-wrap: normal !important;
-    word-break: normal !important; /* default, avoids breaking words arbitrarily */
     background-color: brown;
     width: 100px;
     flex-shrink: 0;
@@ -816,6 +809,7 @@ font-family: Inter;
 .black-cta-modified:hover {
 transform: scale(1.2);
 }
+
 
 
 
