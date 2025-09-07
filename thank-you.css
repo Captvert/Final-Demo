@@ -200,6 +200,8 @@ body::-webkit-scrollbar-thumb:hover{
     margin-left: clamp(0px, 13vw, 65.91px);
     top: 0vw;
     position: relative;
+    padding-bottom: 1vw;
+    box-sizing: border-box;
 }
 
 .lock-screen-email-notification-arabic {
@@ -214,6 +216,8 @@ body::-webkit-scrollbar-thumb:hover{
     margin-top: 0px;
     top: 0vw;
     position: relative;
+    padding-bottom: 1vw;
+    box-sizing: border-box;
 }
 
 .email-content{
@@ -264,8 +268,8 @@ body::-webkit-scrollbar-thumb:hover{
     font-size: clamp(0px, 0.6vw, 3.04px) ;
     font-weight: 300;
     width: 20vw;
-    padding-bottom: 1vw;
-    background-color: green;
+    background-color: red;
+    white-space: wrap;
 }
 
 
@@ -799,6 +803,7 @@ font-family: Inter;
 .black-cta-modified:hover {
 transform: scale(1.2);
 }
+
 
 
 
