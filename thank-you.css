@@ -267,8 +267,8 @@ body::-webkit-scrollbar-thumb:hover{
 .email-message{
     font-size: clamp(0px, 0.6vw, 3.04px) ;
     font-weight: 300;
-    width: 20vw;
-    background-color: red;
+    width: 16vw;
+    background-color: orange;
     white-space: wrap;
 }
 
@@ -803,6 +803,7 @@ font-family: Inter;
 .black-cta-modified:hover {
 transform: scale(1.2);
 }
+
 
 
 
