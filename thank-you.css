@@ -202,6 +202,7 @@ body::-webkit-scrollbar-thumb:hover{
     margin-left: clamp(0px, 13vw, 65.91px);
     top: 0vw;
     position: relative;
+    white-space: nowrap !important;
 }
 
 .lock-screen-email-notification-arabic {
@@ -215,7 +216,9 @@ body::-webkit-scrollbar-thumb:hover{
     margin-right: clamp(0px, 13vw, 65.91px);
     margin-top: 0px;
     top: 0vw;
-    position: relative;}
+    position: relative;
+    white-space: nowrap !important;
+}
 
 .email-content{
     margin-top: calc(-1 * (clamp(0px, 1vw, 5.4px)));
@@ -227,6 +230,7 @@ body::-webkit-scrollbar-thumb:hover{
     color: red !important;
     align-self: end;
     line-height: 1.7;
+    white-space: nowrap !important;
 }
 
 .email-sender-and-time{
@@ -249,7 +253,7 @@ body::-webkit-scrollbar-thumb:hover{
 .email-subject{
     font-size: clamp(0px, 0.6vw, 3.04px);
     font-weight: 500;
-    white-space: nowrap;
+    white-space: nowrap !important;
 }
 
 .email-time{
@@ -259,7 +263,7 @@ body::-webkit-scrollbar-thumb:hover{
 .email-message{
     font-size: clamp(0px, 0.6vw, 3.04px) ;
     font-weight: 300;
-    white-space: nowrap;
+    white-space: nowrap !important;
 }
 
 
@@ -793,6 +797,7 @@ font-family: Inter;
 .black-cta-modified:hover {
 transform: scale(1.2);
 }
+
 
 
 
