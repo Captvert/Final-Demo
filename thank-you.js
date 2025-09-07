@@ -161,19 +161,19 @@ roleA.innerHTML = ` Thank You  <span class ="booking-username">${userInputtedDat
 
 
 const emailSubjectA = document.querySelector('.email-subject');
-emailSubjectA.innerText = `${userInputtedData.serviceType} for ${userInputtedData.personalName}`;
+emailSubjectA.innerHTML = `${userInputtedData.serviceType} for ${userInputtedData.personalName}`;
 
 const emailMessageA = document.querySelector('.email-message');
-emailMessageA.innerText = `a ${userInputtedData.serviceType} for ${userInputtedData.personalName}, tap to view full information.`;}}else if (langButton.innerText == "EN"){
+emailMessageA.innerHTML = `a ${userInputtedData.serviceType} for ${userInputtedData.personalName}, tap to view full information.`;}}else if (langButton.innerText == "EN"){
 
           const roleA = document.querySelector('.role');
           roleA.innerHTML = `يعطيك العافية <strong class ="booking-username"> ${userInputtedData.personalName}</strong>!`;
 
           const emailSubjectA = document.querySelector('.email-subject');
-          emailSubjectA.innerText = `${userInputtedData.serviceType}  ل${userInputtedData.personalName}`;
+          emailSubjectA.innerHTML = `${userInputtedData.serviceType}  ل${userInputtedData.personalName}`;
 
           const emailMessageA = document.querySelector('.email-message');
-          emailMessageA.innerText = `${userInputtedData.serviceType}  ل${userInputtedData.personalName}, إنقر لمشاهدة التفاصيل.`;
+          emailMessageA.innerHTML = `${userInputtedData.serviceType}  ل${userInputtedData.personalName}, إنقر لمشاهدة التفاصيل.`;
 };
 
 
@@ -1036,6 +1036,7 @@ if (userInputtedData.serviceType == "Wedding Coverage" || userInputtedData.servi
 
 }};          
           
+
 
 
 
