@@ -229,7 +229,7 @@ body::-webkit-scrollbar-thumb:hover{
     color: red !important;
     align-self: end;
     line-height: 1.7;
-    background-color: orange;
+    background-color: orange !important;
 }
 
 .email-sender-and-time{
@@ -802,6 +802,7 @@ font-family: Inter;
 .black-cta-modified:hover {
 transform: scale(1.2);
 }
+
 
 
 
