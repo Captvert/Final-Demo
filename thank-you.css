@@ -255,7 +255,6 @@ body::-webkit-scrollbar-thumb:hover{
     font-size: clamp(0px, 0.6vw, 3.04px);
     font-weight: 500;
     background-color: brown;
-    width: 100px;
     flex-shrink: 0;
     display: block;
 }
@@ -268,7 +267,6 @@ body::-webkit-scrollbar-thumb:hover{
     font-size: clamp(0px, 0.6vw, 3.04px) ;
     font-weight: 300;
     background-color: brown;
-    width: 100px;
     flex-shrink: 0;
     display: block;
 }
@@ -804,6 +802,7 @@ font-family: Inter;
 .black-cta-modified:hover {
 transform: scale(1.2);
 }
+
 
 
 
