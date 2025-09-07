@@ -16,7 +16,7 @@
 
 body{
     font-family: Inter;
-    background-color: red !important;
+    background-color: green !important;
 }
 
 body::-webkit-scrollbar {
@@ -809,6 +809,7 @@ font-family: Inter;
 .black-cta-modified:hover {
 transform: scale(1.2);
 }
+
 
 
 
