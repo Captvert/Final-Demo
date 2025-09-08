@@ -190,18 +190,21 @@ body::-webkit-scrollbar-thumb:hover{
 
 .lock-screen-email-notification {
     font-size: clamp(0px, 0.3vw, 1.52px);
-    height: clamp(0px, 5.3vw, 26.871px);
+    height: clamp(0px, 4vw, 20.28px);
     margin-top: 0px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     width: clamp(0px, 18vw, 91.26px);
-    margin-left: clamp(0px, 13vw, 65.91px);
+    margin-left: clamp(0px, 12.5vw, 63.375px);
     top: 0vw;
     position: relative;
-    padding-bottom: 1vw;
-    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding-bottom: clamp(0px, 1.2vw , 5.07px );
+    padding-left: clamp(0px, 1.2vw , 5.07px );
+    padding-right: clamp(0px, 1vw , 5.07px );
+    border-radius: clamp(0px, 1vw , 5.07px );
 }
 
 .lock-screen-email-notification-arabic {
@@ -212,12 +215,15 @@ body::-webkit-scrollbar-thumb:hover{
     align-items: center;
     justify-content: space-between;
     width: clamp(0px, 18vw, 91.26px);
-    margin-right: clamp(0px, 13vw, 65.91px);
+    margin-right: clamp(0px, 12.5vw, 63.375px);
     margin-top: 0px;
     top: 0vw;
     position: relative;
-    padding-bottom: 1vw;
-    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding-bottom: clamp(0px, 1.2vw , 5.07px );
+    padding-left: clamp(0px, 1.2vw , 5.07px );
+    padding-right: clamp(0px, 1vw , 5.07px );
+    border-radius: clamp(0px, 1vw , 5.07px );
 }
 
 .email-content{
@@ -230,9 +236,6 @@ body::-webkit-scrollbar-thumb:hover{
     color: black;
     align-self: end;
     line-height: 1.7;
-    overflow-wrap: normal;
-    word-break: normal; /* default, avoids breaking words arbitrarily */
-    white-space: nowrap; /* prevents wrapping at whitespace */
 }
 
 .email-sender-and-time{
@@ -254,22 +257,17 @@ body::-webkit-scrollbar-thumb:hover{
 
 .email-subject{
     font-size: clamp(0px, 0.6vw, 3.04px);
-    font-weight: 500;
-    overflow-wrap: normal;
-    word-break: normal; /* default, avoids breaking words arbitrarily */
-    white-space: nowrap; /* prevents wrapping at whitespace */
+    font-weight: bold;
+    white-space: nowrap !important;
 }
 
 .email-time{
-    font-size: clamp(0px, 0.6vw, 3.04px) ;
+    font-size: clamp(0px, 0.6vw, 3.04px);
 }
 
 .email-message{
-    font-size: clamp(0px, 0.6vw, 3.04px) ;
+    font-size: clamp(0px, 0.6vw, 3.04px);
     font-weight: 300;
-    width: 16vw;
-    background-color: orange;
-    white-space: wrap;
 }
 
 
@@ -803,30 +801,6 @@ font-family: Inter;
 .black-cta-modified:hover {
 transform: scale(1.2);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
