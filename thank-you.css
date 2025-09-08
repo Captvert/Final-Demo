@@ -271,7 +271,10 @@ body::-webkit-scrollbar-thumb:hover{
     flex-direction: row;
     align-items: center;
     flex-wrap: nowrap;
+    word-break: keep-all;
 }
+
+
 
 .email-time{
     font-size: clamp(0px, 0.6vw, 3.04px);
@@ -814,6 +817,7 @@ font-family: Inter;
 .black-cta-modified:hover {
 transform: scale(1.2);
 }
+
 
 
 
