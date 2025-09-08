@@ -313,10 +313,10 @@ function currentLanguage(){
         emailTimeA.innerText = 'الآن';
 
         const emailSubjectA = document.querySelector('.email-subject');
-        emailSubjectA.innerText = `${userInputtedData.serviceType}  ل${userInputtedData.personalName}`;
+        emailSubjectA.innerText = `${userInputtedData.serviceType}  g ${userInputtedData.personalName}`;
 
         const emailMessageA = document.querySelector('.email-message');
-        emailMessageA.innerText = `${userInputtedData.serviceType}  ل${userInputtedData.personalName}, إنقر لمشاهدة التفاصيل.`;
+        emailMessageA.innerText = `${userInputtedData.serviceType}  g ${userInputtedData.personalName}, إنقر لمشاهدة التفاصيل.`;
 
         const lockScreenTime = document.querySelector('.lock-screen-time-large');
         lockScreenTime.innerText = getArabicTime();
@@ -707,10 +707,10 @@ function switchLanguage(){
 
 
         const emailSubjectA = document.querySelector('.email-subject');
-        emailSubjectA.innerText = `${userInputtedData.serviceType}  ل${userInputtedData.personalName}`;
+        emailSubjectA.innerText = `${userInputtedData.serviceType}  g ${userInputtedData.personalName}`;
 
         const emailMessageA = document.querySelector('.email-message');
-        emailMessageA.innerText = `${userInputtedData.serviceType}  ل${userInputtedData.personalName}, إنقر لمشاهدة التفاصيل.`;
+        emailMessageA.innerText = `${userInputtedData.serviceType}  g ${userInputtedData.personalName}, إنقر لمشاهدة التفاصيل.`;
 
         const lockScreenTime = document.querySelector('.lock-screen-time-large');
         lockScreenTime.innerText = getArabicTime();
@@ -1036,6 +1036,7 @@ if (userInputtedData.serviceType == "Wedding Coverage" || userInputtedData.servi
 
 }};          
           
+
 
 
 
