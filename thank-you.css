@@ -240,6 +240,7 @@ body::-webkit-scrollbar-thumb:hover{
     color: black;
     align-self: end;
     line-height: 1.7;
+    background-color: blue;
 }
 
 .email-sender-and-time{
@@ -265,6 +266,7 @@ body::-webkit-scrollbar-thumb:hover{
     white-space: nowrap !important;
     line-height: 1.65;
     word-break: normal;
+    background-color: green;
 }
 
 .email-time{
@@ -808,6 +810,7 @@ font-family: Inter;
 .black-cta-modified:hover {
 transform: scale(1.2);
 }
+
 
 
 
