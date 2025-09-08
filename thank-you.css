@@ -16,6 +16,7 @@
 
 body{
     font-family: Inter;
+    background-color: red;
 }
 
 body::-webkit-scrollbar {
@@ -206,6 +207,7 @@ body::-webkit-scrollbar-thumb:hover{
     padding-left: clamp(0px, 1vw , 5.07px );
     padding-right: clamp(0px, 1vw , 5.07px );
     border-radius: clamp(0px, 1vw , 5.07px );
+    flex-wrap: nowrap;
 }
 
 .lock-screen-email-notification-arabic {
@@ -226,6 +228,7 @@ body::-webkit-scrollbar-thumb:hover{
     padding-left: clamp(0px, 1vw , 5.07px );
     padding-right: clamp(0px, 1vw , 5.07px );
     border-radius: clamp(0px, 1vw , 5.07px );
+    flex-wrap: nowrap;
 }
 
 .email-content{
@@ -804,6 +807,7 @@ font-family: Inter;
 .black-cta-modified:hover {
 transform: scale(1.2);
 }
+
 
 
 
