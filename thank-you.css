@@ -263,10 +263,9 @@ body::-webkit-scrollbar-thumb:hover{
 .email-subject{
     font-size: clamp(0px, 0.6vw, 3.04px);
     font-weight: bold;
-    white-space: nowrap !important;
-    line-height: 1.65;
-    word-break: normal;
-    background-color: green;
+    white-space: pre !important;
+    line-height: 1.65;    
+    background-color: yellow;
 }
 
 .email-time{
@@ -810,6 +809,7 @@ font-family: Inter;
 .black-cta-modified:hover {
 transform: scale(1.2);
 }
+
 
 
 
