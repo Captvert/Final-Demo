@@ -257,6 +257,8 @@ margin-top:clamp(0px, 4.18604651vw, 21.223px );
     margin-top: 5vw;
     font-size-adjust: 0.48;
     color: green;
+    direction: rtl;
+    unicode-bidi: bidi-override;
 }
 
 
@@ -703,6 +705,7 @@ margin-top:clamp(0px, 4.18604651vw, 21.223px );
     box-sizing: border-box;
     word-break: break-word;
 }
+
 
 
 
