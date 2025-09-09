@@ -200,7 +200,8 @@ alert('This is the service: ' + userInputtedData.serviceType);
 
 if (userInputtedData.serviceType == "Wedding Coverage" || userInputtedData.serviceType == "تغطية الأفراح" ){
 
-  
+      alert(userInputtedData.serviceType + 'Is the Service')
+
   const sampleSectionTitle = document.querySelector('.sample-section-title');
   sampleSectionTitle.innerHTML  =" Previous Wedding Coverages"  ;
   const sampleSectionDescription = document.querySelector('.sample-section-description');
@@ -216,6 +217,9 @@ if (userInputtedData.serviceType == "Wedding Coverage" || userInputtedData.servi
   TGSI3.setAttribute('src' , 'ImagesFolder/thank-you-gallery-wedding-item3.png');
   
 }else if (userInputtedData.serviceType == "Product Shoot" ||  userInputtedData.serviceType == "تصوير المنتجات" ){
+        alert(userInputtedData.serviceType + 'Is the Service')
+
+    
     const sampleSectionTitle = document.querySelector('.sample-section-title');
   sampleSectionTitle.innerHTML  ="Previous Product Shoots"  ;
   const sampleSectionDescription = document.querySelector('.sample-section-description');
@@ -230,7 +234,10 @@ if (userInputtedData.serviceType == "Wedding Coverage" || userInputtedData.servi
   const TGSI3 = document.querySelector('.sample-gallery-item3');
   TGSI3.setAttribute('src' , 'ImagesFolder/thank-you-gallery-item3.png');
 }else if (userInputtedData.serviceType == "Studio Shoot" || userInputtedData.serviceType == "تصوير الإستديو"){
-  const sampleSectionTitle = document.querySelector('.sample-section-title');
+      alert(userInputtedData.serviceType + 'Is the Service')
+
+    
+    const sampleSectionTitle = document.querySelector('.sample-section-title');
   sampleSectionTitle.innerHTML  =" Previous Studio Shoots"  ;
   const sampleSectionDescription = document.querySelector('.sample-section-description');
   sampleSectionDescription.innerHTML = 'These are examples of previous product shoots';
@@ -244,7 +251,10 @@ if (userInputtedData.serviceType == "Wedding Coverage" || userInputtedData.servi
   const TGSI3 = document.querySelector('.sample-gallery-item3');
   TGSI3.setAttribute('src' , 'ImagesFolder/thank-you-gallery-studio-item3.png');
 }else if (userInputtedData.serviceType == "Event Coverage" || userInputtedData.serviceType == "تغطية مهرجانات"){
-  const sampleSectionTitle = document.querySelector('.sample-section-title');
+      alert(userInputtedData.serviceType + 'Is the Service')
+
+    
+    const sampleSectionTitle = document.querySelector('.sample-section-title');
   sampleSectionTitle.innerHTML  =" Previous Event Coverages"  ;
   const sampleSectionDescription = document.querySelector('.sample-section-description');
   sampleSectionDescription.innerHTML = 'These are examples of previous event coverages';
@@ -1045,6 +1055,7 @@ if (userInputtedData.serviceType == "Wedding Coverage" || userInputtedData.servi
 
 }};          
           
+
 
 
 
