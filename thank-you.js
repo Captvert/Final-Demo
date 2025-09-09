@@ -25,8 +25,7 @@ if(theAnswer.classList.contains('faq-answer')){
 
 const userInputtedData = JSON.parse(localStorage.getItem('userData'));
 
-console.log();
-
+alert(userInputtedData.serviceType)
 function getFirstName(){
   const firstName = userInputtedData.personalName.split(' ')[0];
   return firstName;
@@ -1036,33 +1035,6 @@ if (userInputtedData.serviceType == "Wedding Coverage" || userInputtedData.servi
 
 }};          
           
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-
-
-
-
-
-
 
 
 
