@@ -255,7 +255,8 @@ margin-top:clamp(0px, 4.18604651vw, 21.223px );
     height: fit-content;
     flex-wrap: wrap;
     margin-top: 5vw;
-    font-size-adjust: 0.36;
+    font-size-adjust: 0.4;
+    color: red;
 }
 
 
@@ -702,6 +703,7 @@ margin-top:clamp(0px, 4.18604651vw, 21.223px );
     box-sizing: border-box;
     word-break: break-word;
 }
+
 
 
 
