@@ -393,7 +393,7 @@ margin-top:clamp(0px, 4.18604651vw, 21.223px );
     max-width:376.109px ;
     max-height: 184px ;
     flex-shrink: 0;
-    margin-right: 1vw;
+    margin-right: clamp(0px , 1vw , 5.07px);
 }
 
 .bulletpoint1 , .bulletpoint2{
@@ -701,6 +701,7 @@ margin-top:clamp(0px, 4.18604651vw, 21.223px );
     box-sizing: border-box;
     word-break: break-word;
 }
+
 
 
 
