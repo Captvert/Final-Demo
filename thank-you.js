@@ -278,7 +278,8 @@ function currentLanguage(){
         mockUpA.setAttribute('src' , 'ImagesFolder/thank-you-mockup-arabic.png');
 
         const emailA = document.querySelector('.lock-screen-email-notification');
-        emailA.classList.replace('lock-screen-email-notification','lock-screen-email-notification-arabic');
+        if (emailA){
+        emailA.classList.replace('lock-screen-email-notification','lock-screen-email-notification-arabic');}
 
         const emailSenderA = document.querySelector('.email-sender');
         emailSenderA.innerText = 'كابتڤرت';
@@ -485,7 +486,8 @@ const mockUpA = document.querySelector('.thank-you-mockup');
 mockUpA.setAttribute('src', 'ImagesFolder/thank-you-mockup.png');
 
 const emailA = document.querySelector('.lock-screen-email-notification-arabic');
-emailA.classList.replace('lock-screen-email-notification-arabic','lock-screen-email-notification');
+if (emailA){
+emailA.classList.replace('lock-screen-email-notification-arabic','lock-screen-email-notification');}
 
 const emailSenderA = document.querySelector('.email-sender');
 emailSenderA.innerText = 'Captvert';
@@ -1094,6 +1096,7 @@ if (
 
 }};          
           
+
 
 
 
