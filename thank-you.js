@@ -195,7 +195,7 @@ lockScreenDate.innerHTML = getArabicDate();
 console.log(languageStored)
 
 
-console.log(userInputtedData.serviceType);
+alert('This is the service: ' + userInputtedData.serviceType);
 
 
 if (userInputtedData.serviceType == "Wedding Coverage" || userInputtedData.serviceType == "تغطية الأفراح" ){
@@ -1035,6 +1035,7 @@ if (userInputtedData.serviceType == "Wedding Coverage" || userInputtedData.servi
 
 }};          
           
+
 
 
 
