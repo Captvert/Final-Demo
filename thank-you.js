@@ -20,9 +20,6 @@ if(theAnswer.classList.contains('faq-answer')){
 }
 };
 
-
-
-
 const userInputtedData = JSON.parse(localStorage.getItem('userData'));
 
 function getFirstName(){
@@ -35,6 +32,24 @@ const userFirstName = getFirstName();
 console.log(userFirstName);
 
 userInputtedData.personalName = userFirstName;
+
+if (document.querySelector('.language').innerText == 'ع'){
+
+const emailSubjectA = document.querySelector('.email-subject');
+emailSubjectA.innerHTML = `${userInputtedData.serviceType} for ${userInputtedData.personalName}`;
+
+const emailMessageA = document.querySelector('.email-message');
+emailMessageA.innerHTML = `a ${userInputtedData.serviceType} for ${userInputtedData.personalName}, tap to view full information.`;
+
+} else if (document.querySelector('.language').innerText == 'EN'){
+const emailSubjectA = document.querySelector('.email-subject');
+emailSubjectA.innerHTML = `${userInputtedData.serviceType}  ل${userInputtedData.personalName}`;
+
+const emailMessageA = document.querySelector('.email-message');
+emailMessageA.innerHTML =  `${userInputtedData.serviceType}  ل${userInputtedData.personalName}, إنقر لمشاهدة التفاصيل.`;
+};
+
+
 
 
 function getArabicTime() {
@@ -488,7 +503,7 @@ mockUpA.setAttribute('src', 'ImagesFolder/thank-you-mockup.png');
 const emailA = document.querySelector('.lock-screen-email-notification-arabic');
 if (emailA){
 emailA.classList.replace('lock-screen-email-notification-arabic','lock-screen-email-notification');}
-
+        
 const emailSenderA = document.querySelector('.email-sender');
 emailSenderA.innerText = 'Captvert';
 
@@ -708,7 +723,7 @@ function switchLanguage(){
         complimentA.innerHTML = 'أنت إسطورة🚀';
 
         const reassuranceA = document.querySelector('.re-assurance-statement');
-        reassuranceA.innerHTML =  ' لا تحاتي, بمجرد تسليمك للحجز وصلني مثل هذا الإشعار على جهازي الخاص:';
+        reassuranceA.innerHTML =  'لا تحاتي, بمجرد تسليمك للحجز وصلني مثل هذا الإشعار على جهازي الخاص:';
 
         const mockUpA = document.querySelector('.thank-you-mockup');
         mockUpA.setAttribute('src' , 'ImagesFolder/thank-you-mockup-arabic.png');
@@ -1096,6 +1111,7 @@ if (
 
 }};          
           
+
 
 
 
