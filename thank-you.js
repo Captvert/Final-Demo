@@ -198,75 +198,88 @@ console.log(languageStored)
 alert('This is the service: ' + userInputtedData.serviceType);
 
 
-if (userInputtedData.serviceType == "Wedding Coverage" || userInputtedData.serviceType == "تغطية الأفراح" ){
+// Normalize the user input
+const normalizedServiceType = userInputtedData.serviceType.trim().toLowerCase();
 
-      alert(userInputtedData.serviceType + 'Is the Service')
+if (
+  normalizedServiceType === "wedding coverage".toLowerCase() || normalizedServiceType === "تغطية الأفراح"
+) {
+  alert(userInputtedData.serviceType + ' Is the Service');
 
   const sampleSectionTitle = document.querySelector('.sample-section-title');
-  sampleSectionTitle.innerHTML  =" Previous Wedding Coverages"  ;
+  sampleSectionTitle.innerHTML = "Previous Wedding Coverages";
+
   const sampleSectionDescription = document.querySelector('.sample-section-description');
   sampleSectionDescription.innerHTML = 'These are examples of previous wedding coverages';
 
   const TGSI1 = document.querySelector('.sample-gallery-item1');
-  TGSI1.setAttribute('src' , 'ImagesFolder/thank-you-gallery-wedding-item1.png');
+  TGSI1.setAttribute('src', 'ImagesFolder/thank-you-gallery-wedding-item1.png');
 
   const TGSI2 = document.querySelector('.sample-gallery-item2');
-  TGSI2.setAttribute('src' , 'ImagesFolder/thank-you-gallery-wedding-item2.png');
+  TGSI2.setAttribute('src', 'ImagesFolder/thank-you-gallery-wedding-item2.png');
 
   const TGSI3 = document.querySelector('.sample-gallery-item3');
-  TGSI3.setAttribute('src' , 'ImagesFolder/thank-you-gallery-wedding-item3.png');
-  
-}else if (userInputtedData.serviceType == "Product Shoot" ||  userInputtedData.serviceType == "تصوير المنتجات" ){
-        alert(userInputtedData.serviceType + 'Is the Service')
+  TGSI3.setAttribute('src', 'ImagesFolder/thank-you-gallery-wedding-item3.png');
 
-    
-    const sampleSectionTitle = document.querySelector('.sample-section-title');
-  sampleSectionTitle.innerHTML  ="Previous Product Shoots"  ;
-  const sampleSectionDescription = document.querySelector('.sample-section-description');
-  sampleSectionDescription.innerHTML ='These are examples of previous product shoots';
+} else if (
+  normalizedServiceType === "product shoot".toLowerCase() || normalizedServiceType === "تصوير المنتجات"
+) {
+  alert(userInputtedData.serviceType + ' Is the Service');
 
-  const TGSI1 = document.querySelector('.sample-gallery-item1');
-  TGSI1.setAttribute('src' , 'ImagesFolder/thank-you-gallery-item1.png');
+  const sampleSectionTitle = document.querySelector('.sample-section-title');
+  sampleSectionTitle.innerHTML = "Previous Product Shoots";
 
-  const TGSI2 = document.querySelector('.sample-gallery-item2');
-  TGSI2.setAttribute('src' , 'ImagesFolder/thank-you-gallery-item2.png');
-
-  const TGSI3 = document.querySelector('.sample-gallery-item3');
-  TGSI3.setAttribute('src' , 'ImagesFolder/thank-you-gallery-item3.png');
-}else if (userInputtedData.serviceType == "Studio Shoot" || userInputtedData.serviceType == "تصوير الإستديو"){
-      alert(userInputtedData.serviceType + 'Is the Service')
-
-    
-    const sampleSectionTitle = document.querySelector('.sample-section-title');
-  sampleSectionTitle.innerHTML  =" Previous Studio Shoots"  ;
   const sampleSectionDescription = document.querySelector('.sample-section-description');
   sampleSectionDescription.innerHTML = 'These are examples of previous product shoots';
 
   const TGSI1 = document.querySelector('.sample-gallery-item1');
-  TGSI1.setAttribute('src' , 'ImagesFolder/thank-you-gallery-studio-item1.png');
+  TGSI1.setAttribute('src', 'ImagesFolder/thank-you-gallery-item1.png');
 
   const TGSI2 = document.querySelector('.sample-gallery-item2');
-  TGSI2.setAttribute('src' , 'ImagesFolder/thank-you-gallery-studio-item2.png');
+  TGSI2.setAttribute('src', 'ImagesFolder/thank-you-gallery-item2.png');
 
   const TGSI3 = document.querySelector('.sample-gallery-item3');
-  TGSI3.setAttribute('src' , 'ImagesFolder/thank-you-gallery-studio-item3.png');
-}else if (userInputtedData.serviceType == "Event Coverage" || userInputtedData.serviceType == "تغطية مهرجانات"){
-      alert(userInputtedData.serviceType + 'Is the Service')
+  TGSI3.setAttribute('src', 'ImagesFolder/thank-you-gallery-item3.png');
 
-    
-    const sampleSectionTitle = document.querySelector('.sample-section-title');
-  sampleSectionTitle.innerHTML  =" Previous Event Coverages"  ;
+} else if (
+  normalizedServiceType === "studio shoot".toLowerCase() || normalizedServiceType === "تصوير الإستديو"
+) {
+  alert(userInputtedData.serviceType + ' Is the Service');
+
+  const sampleSectionTitle = document.querySelector('.sample-section-title');
+  sampleSectionTitle.innerHTML = "Previous Studio Shoots";
+
+  const sampleSectionDescription = document.querySelector('.sample-section-description');
+  sampleSectionDescription.innerHTML = 'These are examples of previous studio shoots';
+
+  const TGSI1 = document.querySelector('.sample-gallery-item1');
+  TGSI1.setAttribute('src', 'ImagesFolder/thank-you-gallery-studio-item1.png');
+
+  const TGSI2 = document.querySelector('.sample-gallery-item2');
+  TGSI2.setAttribute('src', 'ImagesFolder/thank-you-gallery-studio-item2.png');
+
+  const TGSI3 = document.querySelector('.sample-gallery-item3');
+  TGSI3.setAttribute('src', 'ImagesFolder/thank-you-gallery-studio-item3.png');
+
+} else if (
+  normalizedServiceType === "event coverage".toLowerCase() || normalizedServiceType === "تغطية مهرجانات"
+) {
+  alert(userInputtedData.serviceType + ' Is the Service');
+
+  const sampleSectionTitle = document.querySelector('.sample-section-title');
+  sampleSectionTitle.innerHTML = "Previous Event Coverages";
+
   const sampleSectionDescription = document.querySelector('.sample-section-description');
   sampleSectionDescription.innerHTML = 'These are examples of previous event coverages';
 
   const TGSI1 = document.querySelector('.sample-gallery-item1');
-  TGSI1.setAttribute('src' , 'ImagesFolder/thank-you-gallery-event-item1.png');
+  TGSI1.setAttribute('src', 'ImagesFolder/thank-you-gallery-event-item1.png');
 
   const TGSI2 = document.querySelector('.sample-gallery-item2');
-  TGSI2.setAttribute('src' , 'ImagesFolder/thank-you-gallery-event-item2.png');
+  TGSI2.setAttribute('src', 'ImagesFolder/thank-you-gallery-event-item2.png');
 
   const TGSI3 = document.querySelector('.sample-gallery-item3');
-  TGSI3.setAttribute('src' , 'ImagesFolder/thank-you-gallery-event-item3.png');
+  TGSI3.setAttribute('src', 'ImagesFolder/thank-you-gallery-event-item3.png');
 };
 
 
@@ -1055,6 +1068,7 @@ if (userInputtedData.serviceType == "Wedding Coverage" || userInputtedData.servi
 
 }};          
           
+
 
 
 
