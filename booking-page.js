@@ -84,15 +84,17 @@ function currentLanguage() {
         const langButton = document.querySelector('.language');
         langButton.innerHTML = 'EN';
 
-        const bookingTitleA = document.querySelector('.booking-introduction-title');        
+        const bookingTitleA = document.querySelector('.booking-introduction-title');       
+        if (bookingTitleA){
         bookingTitleA.classList.replace('booking-introduction-title' ,'booking-introduction-title-arabic')
-        bookingTitleA.innerText = 'ستحصل على مكالمة اليوم!';
+        bookingTitleA.innerText = 'ستحصل على مكالمة اليوم!';};
         
 
 
         const bookingDescriptionA = document.querySelector('.booking-introduction-description');
+        if (bookingDescriptionA){
         bookingDescriptionA.classList.replace('booking-introduction-description' , 'booking-introduction-description-arabic')
-        bookingDescriptionA.innerText = 'لشرح لك الخدمات و تأكيد الحجز. أجب عن هذه لأسئلة لتكون المكالمة مثمرة قدر ألإمكان.';
+        bookingDescriptionA.innerText = 'لشرح لك الخدمات و تأكيد الحجز. أجب عن هذه لأسئلة لتكون المكالمة مثمرة قدر ألإمكان.';};
 
         const servicePickA = document.querySelector('.service-pick');
         servicePickA.querySelectorAll('div').forEach(div => {
@@ -371,15 +373,17 @@ function currentLanguage() {
         langButton.innerHTML = 'ع';
 
 
-        const bookingTitle = document.querySelector('.booking-introduction-title-arabic');        
+        const bookingTitle = document.querySelector('.booking-introduction-title-arabic');   
+        if (bookingTitle){
         bookingTitle.classList.replace('booking-introduction-title-arabic' ,'booking-introduction-title')
-        bookingTitle.innerText = 'You Will Get A Call Today!';
+        bookingTitle.innerText = 'You Will Get A Call Today!';};
         
 
 
         const bookingDescription = document.querySelector('.booking-introduction-description-arabic');
+        if (bookingDescription){
         bookingDescription.classList.replace('booking-introduction-description-arabic' , 'booking-introduction-description')
-        bookingDescription.innerText = 'To inform you about the service and confirm the booking. Answer these questions to make it as productive as possible!';
+        bookingDescription.innerText = 'To inform you about the service and confirm the booking. Answer these questions to make it as productive as possible!';}
 
         const servicePick = document.querySelector('.service-pick');
         servicePick.querySelectorAll('div').forEach(div => {
@@ -656,15 +660,17 @@ function switchLanguage(){
         const langButton = document.querySelector('.language');
         langButton.innerHTML = 'EN';
 
-        const bookingTitleA = document.querySelector('.booking-introduction-title');        
+        const bookingTitleA = document.querySelector('.booking-introduction-title');      
+        if (bookingTitleA){
         bookingTitleA.classList.replace('booking-introduction-title' ,'booking-introduction-title-arabic')
-        bookingTitleA.innerText = 'ستحصل على مكالمة اليوم!';
+        bookingTitleA.innerText = 'ستحصل على مكالمة اليوم!';};
         
 
 
         const bookingDescriptionA = document.querySelector('.booking-introduction-description');
+        if (bookingDescriptionA){
         bookingDescriptionA.classList.replace('booking-introduction-description' , 'booking-introduction-description-arabic')
-        bookingDescriptionA.innerText = 'لشرح لك الخدمات و تأكيد الحجز. أجب عن هذه لأسئلة لتكون المكالمة مثمرة قدر ألإمكان.';
+        bookingDescriptionA.innerText = 'لشرح لك الخدمات و تأكيد الحجز. أجب عن هذه لأسئلة لتكون المكالمة مثمرة قدر ألإمكان.';};
 
         const servicePickA = document.querySelector('.service-pick');
         servicePickA.querySelectorAll('div').forEach(div => {
@@ -949,15 +955,17 @@ function switchLanguage(){
         langButton.innerHTML = 'ع';
 
 
-        const bookingTitle = document.querySelector('.booking-introduction-title-arabic');        
+        const bookingTitle = document.querySelector('.booking-introduction-title-arabic');   
+        if (bookingTitle){
         bookingTitle.classList.replace('booking-introduction-title-arabic' ,'booking-introduction-title')
-        bookingTitle.innerText = 'You Will Get A Call Today!';
+        bookingTitle.innerText = 'You Will Get A Call Today!';};
         
 
 
         const bookingDescription = document.querySelector('.booking-introduction-description-arabic');
+        if (bookingDescription){
         bookingDescription.classList.replace('booking-introduction-description-arabic' , 'booking-introduction-description')
-        bookingDescription.innerText = 'To inform you about the service and confirm the booking. Answer these questions to make it as productive as possible!';
+        bookingDescription.innerText = 'To inform you about the service and confirm the booking. Answer these questions to make it as productive as possible!';}
 
         const servicePick = document.querySelector('.service-pick');
         servicePick.querySelectorAll('div').forEach(div => {
@@ -3502,6 +3510,7 @@ alert('Kindly, enter the required information first.');}else if (langButton.inne
 
 
 currentLanguage();
+
 
 
 
