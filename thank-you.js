@@ -33,24 +33,6 @@ console.log(userFirstName);
 
 userInputtedData.personalName = userFirstName;
 
-if (document.querySelector('.language').innerText == 'ع'){
-
-const emailSubjectA = document.querySelector('.email-subject');
-emailSubjectA.innerHTML = `${userInputtedData.serviceType} for ${userInputtedData.personalName}`;
-
-const emailMessageA = document.querySelector('.email-message');
-emailMessageA.innerHTML = `a ${userInputtedData.serviceType} for ${userInputtedData.personalName}, tap to view full information.`;
-
-} else if (document.querySelector('.language').innerText == 'EN'){
-const emailSubjectA = document.querySelector('.email-subject');
-emailSubjectA.innerHTML = `${userInputtedData.serviceType}  ل${userInputtedData.personalName}`;
-
-const emailMessageA = document.querySelector('.email-message');
-emailMessageA.innerHTML =  `${userInputtedData.serviceType}  ل${userInputtedData.personalName}, إنقر لمشاهدة التفاصيل.`;
-};
-
-
-
 
 function getArabicTime() {
   const now = new Date();
@@ -162,6 +144,21 @@ function getDate() {
 console.log(getDate());
 
 
+if (document.querySelector('.language').innerText == 'ع'){
+
+const emailSubjectA = document.querySelector('.email-subject');
+emailSubjectA.innerHTML = `${userInputtedData.serviceType} for ${userInputtedData.personalName}`;
+
+const emailMessageA = document.querySelector('.email-message');
+emailMessageA.innerHTML = `a ${userInputtedData.serviceType} for ${userInputtedData.personalName}, tap to view full information.`;
+
+} else if (document.querySelector('.language').innerText == 'EN'){
+const emailSubjectA = document.querySelector('.email-subject');
+emailSubjectA.innerHTML = `${userInputtedData.serviceType}  ل${userInputtedData.personalName}`;
+
+const emailMessageA = document.querySelector('.email-message');
+emailMessageA.innerHTML =  `${userInputtedData.serviceType}  ل${userInputtedData.personalName}, إنقر لمشاهدة التفاصيل.`;
+};
 
 
 
@@ -1111,6 +1108,7 @@ if (
 
 }};          
           
+
 
 
 
