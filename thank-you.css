@@ -122,6 +122,15 @@ body::-webkit-scrollbar-thumb:hover{
     font-weight: bold;
     margin-bottom:  clamp(0px , 3.72093023vw , 18.865px);
     color: white;
+    white-space: nowrap;
+}
+
+.sample-section-title{
+    white-space: nowrap;
+}
+
+.sample-section-link{
+    white-space:nowrap;
 }
 
 .sample-section-description{
@@ -804,6 +813,7 @@ font-family: Inter;
 .black-cta-modified:hover {
 transform: scale(1.2);
 }
+
 
 
 
