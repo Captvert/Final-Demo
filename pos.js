@@ -78,5 +78,3 @@ function optionCreationPOS(...options){
               
     ;
     };
-
-    };
