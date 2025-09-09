@@ -25,7 +25,6 @@ if(theAnswer.classList.contains('faq-answer')){
 
 const userInputtedData = JSON.parse(localStorage.getItem('userData'));
 
-alert(userInputtedData.serviceType)
 function getFirstName(){
   const firstName = userInputtedData.personalName.split(' ')[0];
   return firstName;
@@ -151,60 +150,13 @@ console.log(getDate());
 
 
 
-if (userInputtedData){
-const langButton = document.querySelector('.language')
-if (langButton.innerText == "ع"){
-
-const roleA = document.querySelector('.role');
-roleA.innerHTML = ` Thank You  <span class ="booking-username">${userInputtedData.personalName}</span>!`
-
-
-const emailSubjectA = document.querySelector('.email-subject');
-emailSubjectA.innerHTML = `${userInputtedData.serviceType} for ${userInputtedData.personalName}`;
-
-const emailMessageA = document.querySelector('.email-message');
-emailMessageA.innerHTML = `a ${userInputtedData.serviceType} for ${userInputtedData.personalName}, tap to view full information.`;}}else if (langButton.innerText == "EN"){
-
-          const roleA = document.querySelector('.role');
-          roleA.innerHTML = `يعطيك العافية <strong class ="booking-username"> ${userInputtedData.personalName}</strong>!`;
-
-          const emailSubjectA = document.querySelector('.email-subject');
-          emailSubjectA.innerHTML = `${userInputtedData.serviceType}  ل${userInputtedData.personalName}`;
-
-          const emailMessageA = document.querySelector('.email-message');
-          emailMessageA.innerHTML = `${userInputtedData.serviceType}  ل${userInputtedData.personalName}, إنقر لمشاهدة التفاصيل.`;
-};
-
-
-const langButton = document.querySelector('.language');
-
-if (langButton.innerText == "ع"){
-const lockScreenTime = document.querySelector('.lock-screen-time-large');
-lockScreenTime.innerText = getTime();
-
-const lockScreenDate = document.querySelector('.lock-screen-date');
-lockScreenDate.innerHTML = getDate();}else if (langButton.innerText == "EN"){
-const lockScreenTime = document.querySelector('.lock-screen-time-large');
-lockScreenTime.innerText = getArabicTime();
-
-const lockScreenDate = document.querySelector('.lock-screen-date');
-lockScreenDate.innerHTML = getArabicDate();
-}
-
-    let languageStored = localStorage.getItem('previousLanguage') || 'English';
-console.log(languageStored)
-
-
-alert('This is the service: ' + userInputtedData.serviceType);
-
-
 // Normalize the user input
 const normalizedServiceType = userInputtedData.serviceType.trim().toLowerCase();
 
 if (
   normalizedServiceType === "wedding coverage".toLowerCase() || normalizedServiceType === "تغطية الأفراح"
 ) {
-  alert(userInputtedData.serviceType + ' Is the Service');
+  
 
   const sampleSectionTitle = document.querySelector('.sample-section-title');
   sampleSectionTitle.innerHTML = "Previous Wedding Coverages";
@@ -224,7 +176,7 @@ if (
 } else if (
   normalizedServiceType === "product shoot".toLowerCase() || normalizedServiceType === "تصوير المنتجات"
 ) {
-  alert(userInputtedData.serviceType + ' Is the Service');
+  
 
   const sampleSectionTitle = document.querySelector('.sample-section-title');
   sampleSectionTitle.innerHTML = "Previous Product Shoots";
@@ -244,7 +196,7 @@ if (
 } else if (
   normalizedServiceType === "studio shoot".toLowerCase() || normalizedServiceType === "تصوير الإستديو"
 ) {
-  alert(userInputtedData.serviceType + ' Is the Service');
+  
 
   const sampleSectionTitle = document.querySelector('.sample-section-title');
   sampleSectionTitle.innerHTML = "Previous Studio Shoots";
@@ -264,7 +216,7 @@ if (
 } else if (
   normalizedServiceType === "event coverage".toLowerCase() || normalizedServiceType === "تغطية مهرجانات"
 ) {
-  alert(userInputtedData.serviceType + ' Is the Service');
+  
 
   const sampleSectionTitle = document.querySelector('.sample-section-title');
   sampleSectionTitle.innerHTML = "Previous Event Coverages";
@@ -367,7 +319,7 @@ function currentLanguage(){
 
 
         const SampleTitleA = document.querySelector('.sample-section-title');
-        SampleTitleA.innerText = "من تصوير المنتجات سابقاَ";
+        SampleTitleA.innerText = "سابقاَ من تصوير المنتجات";
 
         const SampleLinkA = document.querySelector('.sample-section-link');
         SampleLinkA.innerText = 'شاهد المزيد';
@@ -406,66 +358,86 @@ function currentLanguage(){
         footerDescriptionA.innerHTML = 'أدعوك للإنضمام معي في رحلتي على التواصل الأجتماعي.';
 
 
-        if (userInputtedData.serviceType == "Wedding Coverage" || userInputtedData.serviceType == "تغطية الأفراح" ){
+// Normalize the user input
+const normalizedServiceType = userInputtedData.serviceType.trim().toLowerCase();
 
-        const sampleSectionTitle = document.querySelector('.sample-section-title');
-        sampleSectionTitle.innerHTML  ="من تصوير الأعراس سابقاَ"  ;
-        const sampleSectionDescription = document.querySelector('.sample-section-description');
-        sampleSectionDescription.innerHTML = 'هذه نماذج تغطية الأفراح سابقاً';
+if (
+  normalizedServiceType === "wedding coverage".toLowerCase() || normalizedServiceType === "تغطية الأفراح"
+) {
 
-        const TGSI1 = document.querySelector('.sample-gallery-item1');
-        TGSI1.setAttribute('src' , 'ImagesFolder/thank-you-gallery-wedding-item1.png');
+  const sampleSectionTitle = document.querySelector('.sample-section-title');
+  sampleSectionTitle.innerHTML = "سابقاَ من تغطية الأفراح" ;
 
-        const TGSI2 = document.querySelector('.sample-gallery-item2');
-        TGSI2.setAttribute('src' , 'ImagesFolder/thank-you-gallery-wedding-item2.png');
+  const sampleSectionDescription = document.querySelector('.sample-section-description');
+  sampleSectionDescription.innerHTML = 'هذه نماذج تغطية الأفراح سابقاَ';
 
-        const TGSI3 = document.querySelector('.sample-gallery-item3');
-        TGSI3.setAttribute('src' , 'ImagesFolder/thank-you-gallery-wedding-item3.png');
-        
-      }else if (userInputtedData.serviceType == "Product Shoot" ||  userInputtedData.serviceType == " تصوير المنتجات" ){
-          const sampleSectionTitle = document.querySelector('.sample-section-title');
-        sampleSectionTitle.innerHTML  ="من تصوير المنتجات سابقاَ"  ;
-        const sampleSectionDescription = document.querySelector('.sample-section-description');
-        sampleSectionDescription.innerHTML = 'هذه نماذج  تصوير المنتجات سابقاً';
+  const TGSI1 = document.querySelector('.sample-gallery-item1');
+  TGSI1.setAttribute('src', 'ImagesFolder/thank-you-gallery-wedding-item1.png');
 
-        const TGSI1 = document.querySelector('.sample-gallery-item1');
-        TGSI1.setAttribute('src' , 'ImagesFolder/thank-you-gallery-item1.png');
+  const TGSI2 = document.querySelector('.sample-gallery-item2');
+  TGSI2.setAttribute('src', 'ImagesFolder/thank-you-gallery-wedding-item2.png');
 
-        const TGSI2 = document.querySelector('.sample-gallery-item2');
-        TGSI2.setAttribute('src' , 'ImagesFolder/thank-you-gallery-item2.png');
+  const TGSI3 = document.querySelector('.sample-gallery-item3');
+  TGSI3.setAttribute('src', 'ImagesFolder/thank-you-gallery-wedding-item3.png');
 
-        const TGSI3 = document.querySelector('.sample-gallery-item3');
-        TGSI3.setAttribute('src' , 'ImagesFolder/thank-you-gallery-item3.png');
-      }else if (userInputtedData.serviceType == "Studio Shoot" || userInputtedData.serviceType == "تصوير الإستديو"){
-        const sampleSectionTitle = document.querySelector('.sample-section-title');
-        sampleSectionTitle.innerHTML  ="من تصوير الإستديو سابقاَ"  ;
-        const sampleSectionDescription = document.querySelector('.sample-section-description');
-        sampleSectionDescription.innerHTML = 'هذه نماذج  تصوير الإستديو سابقاً';
+} else if (
+  normalizedServiceType === "product shoot".toLowerCase() || normalizedServiceType === "تصوير المنتجات"
+) {
 
-        const TGSI1 = document.querySelector('.sample-gallery-item1');
-        TGSI1.setAttribute('src' , 'ImagesFolder/thank-you-gallery-studio-item1.png');
+  const sampleSectionTitle = document.querySelector('.sample-section-title');
+  sampleSectionTitle.innerHTML = "سابقاَ من تصوير منتجات";
 
-        const TGSI2 = document.querySelector('.sample-gallery-item2');
-        TGSI2.setAttribute('src' , 'ImagesFolder/thank-you-gallery-studio-item2.png');
+  const sampleSectionDescription = document.querySelector('.sample-section-description');
+  sampleSectionDescription.innerHTML = 'هذه نماذج تصوير منتجات سابقاَ';
 
-        const TGSI3 = document.querySelector('.sample-gallery-item3');
-        TGSI3.setAttribute('src' , 'ImagesFolder/thank-you-gallery-studio-item3.png');
-      }else if (userInputtedData.serviceType == "Event Coverage" || userInputtedData.serviceType == "تغطية مهرجانات"){
-        const sampleSectionTitle = document.querySelector('.sample-section-title');
-        sampleSectionTitle.innerHTML  ="من تغطية المهرجانات سابقاَ"  ;
-        const sampleSectionDescription = document.querySelector('.sample-section-description');
-        sampleSectionDescription.innerHTML = 'هذه نماذج  تغطية المهرجانات سابقاً';
+  const TGSI1 = document.querySelector('.sample-gallery-item1');
+  TGSI1.setAttribute('src', 'ImagesFolder/thank-you-gallery-item1.png');
 
-        const TGSI1 = document.querySelector('.sample-gallery-item1');
-        TGSI1.setAttribute('src' , 'ImagesFolder/thank-you-gallery-event-item1.png');
+  const TGSI2 = document.querySelector('.sample-gallery-item2');
+  TGSI2.setAttribute('src', 'ImagesFolder/thank-you-gallery-item2.png');
 
-        const TGSI2 = document.querySelector('.sample-gallery-item2');
-        TGSI2.setAttribute('src' , 'ImagesFolder/thank-you-gallery-event-item2.png');
+  const TGSI3 = document.querySelector('.sample-gallery-item3');
+  TGSI3.setAttribute('src', 'ImagesFolder/thank-you-gallery-item3.png');
 
-        const TGSI3 = document.querySelector('.sample-gallery-item3');
-        TGSI3.setAttribute('src' , 'ImagesFolder/thank-you-gallery-event-item3.png');
-      };
+} else if (
+  normalizedServiceType === "studio shoot".toLowerCase() || normalizedServiceType === "تصوير الإستديو"
+) {
 
+  const sampleSectionTitle = document.querySelector('.sample-section-title');
+  sampleSectionTitle.innerHTML = "سابقاَ من تصوير الأستديو";
+
+  const sampleSectionDescription = document.querySelector('.sample-section-description');
+  sampleSectionDescription.innerHTML = 'هذه نماذج تصوير الأستديو سابقاَ';
+
+  const TGSI1 = document.querySelector('.sample-gallery-item1');
+  TGSI1.setAttribute('src', 'ImagesFolder/thank-you-gallery-studio-item1.png');
+
+  const TGSI2 = document.querySelector('.sample-gallery-item2');
+  TGSI2.setAttribute('src', 'ImagesFolder/thank-you-gallery-studio-item2.png');
+
+  const TGSI3 = document.querySelector('.sample-gallery-item3');
+  TGSI3.setAttribute('src', 'ImagesFolder/thank-you-gallery-studio-item3.png');
+
+} else if (
+  normalizedServiceType === "event coverage".toLowerCase() || normalizedServiceType === "تغطية مهرجانات"
+) {
+  
+
+  const sampleSectionTitle = document.querySelector('.sample-section-title');
+  sampleSectionTitle.innerHTML = "سابقاَ من تغطية مهرجانات";
+
+  const sampleSectionDescription = document.querySelector('.sample-section-description');
+  sampleSectionDescription.innerHTML = 'هذه نماذج تغطية مهرجانات سابقاَ';
+
+  const TGSI1 = document.querySelector('.sample-gallery-item1');
+  TGSI1.setAttribute('src', 'ImagesFolder/thank-you-gallery-event-item1.png');
+
+  const TGSI2 = document.querySelector('.sample-gallery-item2');
+  TGSI2.setAttribute('src', 'ImagesFolder/thank-you-gallery-event-item2.png');
+
+  const TGSI3 = document.querySelector('.sample-gallery-item3');
+  TGSI3.setAttribute('src', 'ImagesFolder/thank-you-gallery-event-item3.png');
+};
 
 
         language = 'Arabic';
@@ -593,68 +565,89 @@ footerDescriptionA.innerHTML = 'I invite you to join me on my social media journ
               
 
 
+// Normalize the user input
+const normalizedServiceType = userInputtedData.serviceType.trim().toLowerCase();
 
-if (userInputtedData.serviceType == "Wedding Coverage" || userInputtedData.serviceType == "تغطية الأفراح" ){
-
+if (
+  normalizedServiceType === "wedding coverage".toLowerCase() || normalizedServiceType === "تغطية الأفراح"
+) {
   
+
   const sampleSectionTitle = document.querySelector('.sample-section-title');
-  sampleSectionTitle.innerHTML  =" Previous Wedding Coverages"  ;
+  sampleSectionTitle.innerHTML = "Previous Wedding Coverages";
+
   const sampleSectionDescription = document.querySelector('.sample-section-description');
   sampleSectionDescription.innerHTML = 'These are examples of previous wedding coverages';
 
   const TGSI1 = document.querySelector('.sample-gallery-item1');
-  TGSI1.setAttribute('src' , 'ImagesFolder/thank-you-gallery-wedding-item1.png');
+  TGSI1.setAttribute('src', 'ImagesFolder/thank-you-gallery-wedding-item1.png');
 
   const TGSI2 = document.querySelector('.sample-gallery-item2');
-  TGSI2.setAttribute('src' , 'ImagesFolder/thank-you-gallery-wedding-item2.png');
+  TGSI2.setAttribute('src', 'ImagesFolder/thank-you-gallery-wedding-item2.png');
 
   const TGSI3 = document.querySelector('.sample-gallery-item3');
-  TGSI3.setAttribute('src' , 'ImagesFolder/thank-you-gallery-wedding-item3.png');
+  TGSI3.setAttribute('src', 'ImagesFolder/thank-you-gallery-wedding-item3.png');
+
+} else if (
+  normalizedServiceType === "product shoot".toLowerCase() || normalizedServiceType === "تصوير المنتجات"
+) {
   
-}else if (userInputtedData.serviceType == "Product Shoot" ||  userInputtedData.serviceType == " تصوير المنتجات" ){
-    const sampleSectionTitle = document.querySelector('.sample-section-title');
-  sampleSectionTitle.innerHTML  =" Previous Product Shoots"  ;
-  const sampleSectionDescription = document.querySelector('.sample-section-description');
-  sampleSectionDescription.innerHTML ='These are examples of previous product shoots';
 
-  const TGSI1 = document.querySelector('.sample-gallery-item1');
-  TGSI1.setAttribute('src' , 'ImagesFolder/thank-you-gallery-item1.png');
-
-  const TGSI2 = document.querySelector('.sample-gallery-item2');
-  TGSI2.setAttribute('src' , 'ImagesFolder/thank-you-gallery-item2.png');
-
-  const TGSI3 = document.querySelector('.sample-gallery-item3');
-  TGSI3.setAttribute('src' , 'ImagesFolder/thank-you-gallery-item3.png');
-}else if (userInputtedData.serviceType == "Studio Shoot" || userInputtedData.serviceType == "تصوير الإستديو"){
   const sampleSectionTitle = document.querySelector('.sample-section-title');
-  sampleSectionTitle.innerHTML  =" Previous Studio Shoots"  ;
+  sampleSectionTitle.innerHTML = "Previous Product Shoots";
+
   const sampleSectionDescription = document.querySelector('.sample-section-description');
   sampleSectionDescription.innerHTML = 'These are examples of previous product shoots';
 
   const TGSI1 = document.querySelector('.sample-gallery-item1');
-  TGSI1.setAttribute('src' , 'ImagesFolder/thank-you-gallery-studio-item1.png');
+  TGSI1.setAttribute('src', 'ImagesFolder/thank-you-gallery-item1.png');
 
   const TGSI2 = document.querySelector('.sample-gallery-item2');
-  TGSI2.setAttribute('src' , 'ImagesFolder/thank-you-gallery-studio-item2.png');
+  TGSI2.setAttribute('src', 'ImagesFolder/thank-you-gallery-item2.png');
 
   const TGSI3 = document.querySelector('.sample-gallery-item3');
-  TGSI3.setAttribute('src' , 'ImagesFolder/thank-you-gallery-studio-item3.png');
-}else if (userInputtedData.serviceType == "Event Coverage" || userInputtedData.serviceType == "تغطية مهرجانات"){
+  TGSI3.setAttribute('src', 'ImagesFolder/thank-you-gallery-item3.png');
+
+} else if (
+  normalizedServiceType === "studio shoot".toLowerCase() || normalizedServiceType === "تصوير الإستديو"
+) {
+  
+
   const sampleSectionTitle = document.querySelector('.sample-section-title');
-  sampleSectionTitle.innerHTML  =" Previous Event Coverages"  ;
+  sampleSectionTitle.innerHTML = "Previous Studio Shoots";
+
+  const sampleSectionDescription = document.querySelector('.sample-section-description');
+  sampleSectionDescription.innerHTML = 'These are examples of previous studio shoots';
+
+  const TGSI1 = document.querySelector('.sample-gallery-item1');
+  TGSI1.setAttribute('src', 'ImagesFolder/thank-you-gallery-studio-item1.png');
+
+  const TGSI2 = document.querySelector('.sample-gallery-item2');
+  TGSI2.setAttribute('src', 'ImagesFolder/thank-you-gallery-studio-item2.png');
+
+  const TGSI3 = document.querySelector('.sample-gallery-item3');
+  TGSI3.setAttribute('src', 'ImagesFolder/thank-you-gallery-studio-item3.png');
+
+} else if (
+  normalizedServiceType === "event coverage".toLowerCase() || normalizedServiceType === "تغطية مهرجانات"
+) {
+  
+
+  const sampleSectionTitle = document.querySelector('.sample-section-title');
+  sampleSectionTitle.innerHTML = "Previous Event Coverages";
+
   const sampleSectionDescription = document.querySelector('.sample-section-description');
   sampleSectionDescription.innerHTML = 'These are examples of previous event coverages';
 
   const TGSI1 = document.querySelector('.sample-gallery-item1');
-  TGSI1.setAttribute('src' , 'ImagesFolder/thank-you-gallery-event-item1.png');
+  TGSI1.setAttribute('src', 'ImagesFolder/thank-you-gallery-event-item1.png');
 
   const TGSI2 = document.querySelector('.sample-gallery-item2');
-  TGSI2.setAttribute('src' , 'ImagesFolder/thank-you-gallery-event-item2.png');
+  TGSI2.setAttribute('src', 'ImagesFolder/thank-you-gallery-event-item2.png');
 
   const TGSI3 = document.querySelector('.sample-gallery-item3');
-  TGSI3.setAttribute('src' , 'ImagesFolder/thank-you-gallery-event-item3.png');
+  TGSI3.setAttribute('src', 'ImagesFolder/thank-you-gallery-event-item3.png');
 };
-
 
        
 
@@ -760,7 +753,7 @@ function switchLanguage(){
         mainCTAA.style.fontFamily = ' Noto Sans Arabic';
 
         const SampleTitleA = document.querySelector('.sample-section-title');
-        SampleTitleA.innerText = "من تصوير المنتجات سابقاَ";
+        SampleTitleA.innerText = " سابقاَ من تصوير المنتجات";
 
         const SampleLinkA = document.querySelector('.sample-section-link');
         SampleLinkA.innerText = 'شاهد المزيد';
@@ -798,66 +791,86 @@ function switchLanguage(){
         const footerDescriptionA = document.querySelector('.footer-description');
         footerDescriptionA.innerHTML = 'أدعوك للإنضمام معي في رحلتي على التواصل الأجتماعي.';
 
-        if (userInputtedData.serviceType == "Wedding Coverage" || userInputtedData.serviceType == "تغطية الأفراح" ){
+// Normalize the user input
+const normalizedServiceType = userInputtedData.serviceType.trim().toLowerCase();
 
-        
-        const sampleSectionTitle = document.querySelector('.sample-section-title');
-        sampleSectionTitle.innerHTML  ="من تصوير الأعراس سابقاَ"  ;
-        const sampleSectionDescription = document.querySelector('.sample-section-description');
-        sampleSectionDescription.innerHTML = 'هذه نماذج تغطية الأفراح سابقاً';
+if (
+  normalizedServiceType === "wedding coverage".toLowerCase() || normalizedServiceType === "تغطية الأفراح"
+) {
 
-        const TGSI1 = document.querySelector('.sample-gallery-item1');
-        TGSI1.setAttribute('src' , 'ImagesFolder/thank-you-gallery-wedding-item1.png');
+  const sampleSectionTitle = document.querySelector('.sample-section-title');
+  sampleSectionTitle.innerHTML = "سابقاَ من تغطية الأفراح" ;
 
-        const TGSI2 = document.querySelector('.sample-gallery-item2');
-        TGSI2.setAttribute('src' , 'ImagesFolder/thank-you-gallery-wedding-item2.png');
+  const sampleSectionDescription = document.querySelector('.sample-section-description');
+  sampleSectionDescription.innerHTML = 'هذه نماذج تغطية الأفراح سابقاَ';
 
-        const TGSI3 = document.querySelector('.sample-gallery-item3');
-        TGSI3.setAttribute('src' , 'ImagesFolder/thank-you-gallery-wedding-item3.png');
-        
-      }else if (userInputtedData.serviceType == "Product Shoot" ||  userInputtedData.serviceType == " تصوير المنتجات" ){
-          const sampleSectionTitle = document.querySelector('.sample-section-title');
-        sampleSectionTitle.innerHTML  ="من تصوير المنتجات سابقاَ"  ;
-        const sampleSectionDescription = document.querySelector('.sample-section-description');
-        sampleSectionDescription.innerHTML = 'هذه نماذج  تصوير المنتجات سابقاً';
+  const TGSI1 = document.querySelector('.sample-gallery-item1');
+  TGSI1.setAttribute('src', 'ImagesFolder/thank-you-gallery-wedding-item1.png');
 
-        const TGSI1 = document.querySelector('.sample-gallery-item1');
-        TGSI1.setAttribute('src' , 'ImagesFolder/thank-you-gallery-item1.png');
+  const TGSI2 = document.querySelector('.sample-gallery-item2');
+  TGSI2.setAttribute('src', 'ImagesFolder/thank-you-gallery-wedding-item2.png');
 
-        const TGSI2 = document.querySelector('.sample-gallery-item2');
-        TGSI2.setAttribute('src' , 'ImagesFolder/thank-you-gallery-item2.png');
+  const TGSI3 = document.querySelector('.sample-gallery-item3');
+  TGSI3.setAttribute('src', 'ImagesFolder/thank-you-gallery-wedding-item3.png');
 
-        const TGSI3 = document.querySelector('.sample-gallery-item3');
-        TGSI3.setAttribute('src' , 'ImagesFolder/thank-you-gallery-item3.png');
-      }else if (userInputtedData.serviceType == "Studio Shoot" || userInputtedData.serviceType == "تصوير الإستديو"){
-        const sampleSectionTitle = document.querySelector('.sample-section-title');
-        sampleSectionTitle.innerHTML  ="من تصوير الإستديو سابقاَ"  ;
-        const sampleSectionDescription = document.querySelector('.sample-section-description');
-        sampleSectionDescription.innerHTML = 'هذه نماذج  تصوير الإستديو سابقاً';
+} else if (
+  normalizedServiceType === "product shoot".toLowerCase() || normalizedServiceType === "تصوير المنتجات"
+) {
 
-        const TGSI1 = document.querySelector('.sample-gallery-item1');
-        TGSI1.setAttribute('src' , 'ImagesFolder/thank-you-gallery-studio-item1.png');
+  const sampleSectionTitle = document.querySelector('.sample-section-title');
+  sampleSectionTitle.innerHTML = "سابقاَ من تصوير منتجات";
 
-        const TGSI2 = document.querySelector('.sample-gallery-item2');
-        TGSI2.setAttribute('src' , 'ImagesFolder/thank-you-gallery-studio-item2.png');
+  const sampleSectionDescription = document.querySelector('.sample-section-description');
+  sampleSectionDescription.innerHTML = 'هذه نماذج تصوير منتجات سابقاَ';
 
-        const TGSI3 = document.querySelector('.sample-gallery-item3');
-        TGSI3.setAttribute('src' , 'ImagesFolder/thank-you-gallery-studio-item3.png');
-      }else if (userInputtedData.serviceType == "Event Coverage" || userInputtedData.serviceType == "تغطية مهرجانات"){
-        const sampleSectionTitle = document.querySelector('.sample-section-title');
-        sampleSectionTitle.innerHTML  ="من تغطية المهرجانات سابقاَ"  ;
-        const sampleSectionDescription = document.querySelector('.sample-section-description');
-        sampleSectionDescription.innerHTML = 'هذه نماذج  تغطية المهرجانات سابقاً';
+  const TGSI1 = document.querySelector('.sample-gallery-item1');
+  TGSI1.setAttribute('src', 'ImagesFolder/thank-you-gallery-item1.png');
 
-        const TGSI1 = document.querySelector('.sample-gallery-item1');
-        TGSI1.setAttribute('src' , 'ImagesFolder/thank-you-gallery-event-item1.png');
+  const TGSI2 = document.querySelector('.sample-gallery-item2');
+  TGSI2.setAttribute('src', 'ImagesFolder/thank-you-gallery-item2.png');
 
-        const TGSI2 = document.querySelector('.sample-gallery-item2');
-        TGSI2.setAttribute('src' , 'ImagesFolder/thank-you-gallery-event-item2.png');
+  const TGSI3 = document.querySelector('.sample-gallery-item3');
+  TGSI3.setAttribute('src', 'ImagesFolder/thank-you-gallery-item3.png');
 
-        const TGSI3 = document.querySelector('.sample-gallery-item3');
-        TGSI3.setAttribute('src' , 'ImagesFolder/thank-you-gallery-event-item3.png');
-      };
+} else if (
+  normalizedServiceType === "studio shoot".toLowerCase() || normalizedServiceType === "تصوير الإستديو"
+) {
+
+  const sampleSectionTitle = document.querySelector('.sample-section-title');
+  sampleSectionTitle.innerHTML = "سابقاَ من تصوير الأستديو";
+
+  const sampleSectionDescription = document.querySelector('.sample-section-description');
+  sampleSectionDescription.innerHTML = 'هذه نماذج تصوير الأستديو سابقاَ';
+
+  const TGSI1 = document.querySelector('.sample-gallery-item1');
+  TGSI1.setAttribute('src', 'ImagesFolder/thank-you-gallery-studio-item1.png');
+
+  const TGSI2 = document.querySelector('.sample-gallery-item2');
+  TGSI2.setAttribute('src', 'ImagesFolder/thank-you-gallery-studio-item2.png');
+
+  const TGSI3 = document.querySelector('.sample-gallery-item3');
+  TGSI3.setAttribute('src', 'ImagesFolder/thank-you-gallery-studio-item3.png');
+
+} else if (
+  normalizedServiceType === "event coverage".toLowerCase() || normalizedServiceType === "تغطية مهرجانات"
+) {
+  
+
+  const sampleSectionTitle = document.querySelector('.sample-section-title');
+  sampleSectionTitle.innerHTML = "سابقاَ من تغطية مهرجانات";
+
+  const sampleSectionDescription = document.querySelector('.sample-section-description');
+  sampleSectionDescription.innerHTML = 'هذه نماذج تغطية مهرجانات سابقاَ';
+
+  const TGSI1 = document.querySelector('.sample-gallery-item1');
+  TGSI1.setAttribute('src', 'ImagesFolder/thank-you-gallery-event-item1.png');
+
+  const TGSI2 = document.querySelector('.sample-gallery-item2');
+  TGSI2.setAttribute('src', 'ImagesFolder/thank-you-gallery-event-item2.png');
+
+  const TGSI3 = document.querySelector('.sample-gallery-item3');
+  TGSI3.setAttribute('src', 'ImagesFolder/thank-you-gallery-event-item3.png');
+};
 
 
         language = 'Arabic';
@@ -986,75 +999,88 @@ footerDescriptionA.innerHTML = 'I invite you to join me on my social media journ
 
 
 
-if (userInputtedData.serviceType == "Wedding Coverage" || userInputtedData.serviceType == "تغطية الأفراح" ){
-    alert(userInputtedData.serviceType + 'Is the Service')
+// Normalize the user input
+const normalizedServiceType = userInputtedData.serviceType.trim().toLowerCase();
+
+if (
+  normalizedServiceType === "wedding coverage".toLowerCase() || normalizedServiceType === "تغطية الأفراح"
+) {
   
+
   const sampleSectionTitle = document.querySelector('.sample-section-title');
-  sampleSectionTitle.innerHTML  =" Previous Wedding Coverages"  ;
+  sampleSectionTitle.innerHTML = "Previous Wedding Coverages";
+
   const sampleSectionDescription = document.querySelector('.sample-section-description');
   sampleSectionDescription.innerHTML = 'These are examples of previous wedding coverages';
 
   const TGSI1 = document.querySelector('.sample-gallery-item1');
-  TGSI1.setAttribute('src' , 'ImagesFolder/thank-you-gallery-wedding-item1.png');
+  TGSI1.setAttribute('src', 'ImagesFolder/thank-you-gallery-wedding-item1.png');
 
   const TGSI2 = document.querySelector('.sample-gallery-item2');
-  TGSI2.setAttribute('src' , 'ImagesFolder/thank-you-gallery-wedding-item2.png');
+  TGSI2.setAttribute('src', 'ImagesFolder/thank-you-gallery-wedding-item2.png');
 
   const TGSI3 = document.querySelector('.sample-gallery-item3');
-  TGSI3.setAttribute('src' , 'ImagesFolder/thank-you-gallery-wedding-item3.png');
+  TGSI3.setAttribute('src', 'ImagesFolder/thank-you-gallery-wedding-item3.png');
+
+} else if (
+  normalizedServiceType === "product shoot".toLowerCase() || normalizedServiceType === "تصوير المنتجات"
+) {
   
-}else if (userInputtedData.serviceType == "Product Shoot" ||  userInputtedData.serviceType == " تصوير المنتجات" ){
-    alert(userInputtedData.serviceType + 'Is the Service')
 
-    
   const sampleSectionTitle = document.querySelector('.sample-section-title');
-  sampleSectionTitle.innerHTML  =" Previous Product Shoots"  ;
-  const sampleSectionDescription = document.querySelector('.sample-section-description');
-  sampleSectionDescription.innerHTML ='These are examples of previous product shoots';
+  sampleSectionTitle.innerHTML = "Previous Product Shoots";
 
-  const TGSI1 = document.querySelector('.sample-gallery-item1');
-  TGSI1.setAttribute('src' , 'ImagesFolder/thank-you-gallery-item1.png');
-
-  const TGSI2 = document.querySelector('.sample-gallery-item2');
-  TGSI2.setAttribute('src' , 'ImagesFolder/thank-you-gallery-item2.png');
-
-  const TGSI3 = document.querySelector('.sample-gallery-item3');
-  TGSI3.setAttribute('src' , 'ImagesFolder/thank-you-gallery-item3.png');
-}else if (userInputtedData.serviceType == "Studio Shoot" || userInputtedData.serviceType == "تصوير الإستديو"){
-      alert(userInputtedData.serviceType + 'Is the Service')
-
-    
-    const sampleSectionTitle = document.querySelector('.sample-section-title');
-  sampleSectionTitle.innerHTML  =" Previous Studio Shoots"  ;
   const sampleSectionDescription = document.querySelector('.sample-section-description');
   sampleSectionDescription.innerHTML = 'These are examples of previous product shoots';
 
   const TGSI1 = document.querySelector('.sample-gallery-item1');
-  TGSI1.setAttribute('src' , 'ImagesFolder/thank-you-gallery-studio-item1.png');
+  TGSI1.setAttribute('src', 'ImagesFolder/thank-you-gallery-item1.png');
 
   const TGSI2 = document.querySelector('.sample-gallery-item2');
-  TGSI2.setAttribute('src' , 'ImagesFolder/thank-you-gallery-studio-item2.png');
+  TGSI2.setAttribute('src', 'ImagesFolder/thank-you-gallery-item2.png');
 
   const TGSI3 = document.querySelector('.sample-gallery-item3');
-  TGSI3.setAttribute('src' , 'ImagesFolder/thank-you-gallery-studio-item3.png');
-}else if (userInputtedData.serviceType == "Event Coverage" || userInputtedData.serviceType == "تغطية مهرجانات"){
-      alert(userInputtedData.serviceType + 'Is the Service')
+  TGSI3.setAttribute('src', 'ImagesFolder/thank-you-gallery-item3.png');
 
-    
-    
-    const sampleSectionTitle = document.querySelector('.sample-section-title');
-  sampleSectionTitle.innerHTML  =" Previous Event Coverages"  ;
+} else if (
+  normalizedServiceType === "studio shoot".toLowerCase() || normalizedServiceType === "تصوير الإستديو"
+) {
+  
+
+  const sampleSectionTitle = document.querySelector('.sample-section-title');
+  sampleSectionTitle.innerHTML = "Previous Studio Shoots";
+
+  const sampleSectionDescription = document.querySelector('.sample-section-description');
+  sampleSectionDescription.innerHTML = 'These are examples of previous studio shoots';
+
+  const TGSI1 = document.querySelector('.sample-gallery-item1');
+  TGSI1.setAttribute('src', 'ImagesFolder/thank-you-gallery-studio-item1.png');
+
+  const TGSI2 = document.querySelector('.sample-gallery-item2');
+  TGSI2.setAttribute('src', 'ImagesFolder/thank-you-gallery-studio-item2.png');
+
+  const TGSI3 = document.querySelector('.sample-gallery-item3');
+  TGSI3.setAttribute('src', 'ImagesFolder/thank-you-gallery-studio-item3.png');
+
+} else if (
+  normalizedServiceType === "event coverage".toLowerCase() || normalizedServiceType === "تغطية مهرجانات"
+) {
+  
+
+  const sampleSectionTitle = document.querySelector('.sample-section-title');
+  sampleSectionTitle.innerHTML = "Previous Event Coverages";
+
   const sampleSectionDescription = document.querySelector('.sample-section-description');
   sampleSectionDescription.innerHTML = 'These are examples of previous event coverages';
 
   const TGSI1 = document.querySelector('.sample-gallery-item1');
-  TGSI1.setAttribute('src' , 'ImagesFolder/thank-you-gallery-event-item1.png');
+  TGSI1.setAttribute('src', 'ImagesFolder/thank-you-gallery-event-item1.png');
 
   const TGSI2 = document.querySelector('.sample-gallery-item2');
-  TGSI2.setAttribute('src' , 'ImagesFolder/thank-you-gallery-event-item2.png');
+  TGSI2.setAttribute('src', 'ImagesFolder/thank-you-gallery-event-item2.png');
 
   const TGSI3 = document.querySelector('.sample-gallery-item3');
-  TGSI3.setAttribute('src' , 'ImagesFolder/thank-you-gallery-event-item3.png');
+  TGSI3.setAttribute('src', 'ImagesFolder/thank-you-gallery-event-item3.png');
 };
 
 
@@ -1068,6 +1094,13 @@ if (userInputtedData.serviceType == "Wedding Coverage" || userInputtedData.servi
 
 }};          
           
+
+
+
+
+
+
+
 
 
 
