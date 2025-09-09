@@ -215,9 +215,9 @@ if (userInputtedData.serviceType == "Wedding Coverage" || userInputtedData.servi
   const TGSI3 = document.querySelector('.sample-gallery-item3');
   TGSI3.setAttribute('src' , 'ImagesFolder/thank-you-gallery-wedding-item3.png');
   
-}else if (userInputtedData.serviceType == "Product Shoot" ||  userInputtedData.serviceType == " تصوير المنتجات" ){
+}else if (userInputtedData.serviceType == "Product Shoot" ||  userInputtedData.serviceType == "تصوير المنتجات" ){
     const sampleSectionTitle = document.querySelector('.sample-section-title');
-  sampleSectionTitle.innerHTML  =" Previous Product Shoots"  ;
+  sampleSectionTitle.innerHTML  ="Previous Product Shoots"  ;
   const sampleSectionDescription = document.querySelector('.sample-section-description');
   sampleSectionDescription.innerHTML ='These are examples of previous product shoots';
 
@@ -1035,6 +1035,7 @@ if (userInputtedData.serviceType == "Wedding Coverage" || userInputtedData.servi
 
 }};          
           
+
 
 
 
