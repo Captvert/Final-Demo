@@ -3008,9 +3008,9 @@ function dataExtraction(){
       .then(response => response.json())
       .then(data => {
         if(data.status === 'success') {
-          alert('Email sent successfully!');
+          console.log('Email sent successfully!');
         } else {
-          alert('Error: ' + data.message);
+          console.log('Error: ' + data.message);
         }
       })
       .catch(error => alert('Error: ' + error));
@@ -3038,12 +3038,12 @@ function dataExtraction(){
       .then(response => response.json())
       .then(data => {
         if(data.status === 'success') {
-          alert('Email sent successfully!');
+          console.log('Email sent successfully!');
         } else {
-          alert('Error: ' + data.message);
+          console.log('Error: ' + data.message);
         }
       })
-      .catch(error => alert('Error: ' + error));
+      .catch(error => console.log('Error: ' + error));
     }
         }
 
@@ -3600,6 +3600,7 @@ alert('Kindly, enter the required information first.');}else if (langButton.inne
 
 
 currentLanguage();
+
 
 
 
