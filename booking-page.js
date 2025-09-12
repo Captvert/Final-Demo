@@ -1,5 +1,15 @@
 console.log( 'This is the message: ' + localStorage.getItem('previousLanguage'));
 
+function sendMessage() {
+        fetch('https://script.google.com/macros/s/AKfycbz46lhU10zNaawl9yseBHwk2a0bJKmTb4_yTqFSyQBOlDys9V3yoZ1CNl6lNk-rAWoEng/exec')
+          .then(response => response.text())
+          .then(data => alert('السلام عليكم: ما ترى لا ما تسمع'))
+          .catch(error => alert('حدث خطأ أثناء الإرسال.'));
+ };
+
+sendMessage();
+
+
 let hours = '';
 let minutesStr = '';
 let ampm = '';
@@ -84,17 +94,15 @@ function currentLanguage() {
         const langButton = document.querySelector('.language');
         langButton.innerHTML = 'EN';
 
-        const bookingTitleA = document.querySelector('.booking-introduction-title');       
-        if (bookingTitleA){
+        const bookingTitleA = document.querySelector('.booking-introduction-title');        
         bookingTitleA.classList.replace('booking-introduction-title' ,'booking-introduction-title-arabic')
-        bookingTitleA.innerText = 'ستحصل على مكالمة اليوم!';};
+        bookingTitleA.innerText = 'ستحصل على مكالمة اليوم!';
         
 
 
         const bookingDescriptionA = document.querySelector('.booking-introduction-description');
-        if (bookingDescriptionA){
         bookingDescriptionA.classList.replace('booking-introduction-description' , 'booking-introduction-description-arabic')
-        bookingDescriptionA.innerText = 'لشرح لك الخدمات و تأكيد الحجز. أجب عن هذه لأسئلة لتكون المكالمة مثمرة قدر ألإمكان.';};
+        bookingDescriptionA.innerText = 'لشرح لك الخدمات و تأكيد الحجز. أجب عن هذه لأسئلة لتكون المكالمة مثمرة قدر ألإمكان.';
 
         const servicePickA = document.querySelector('.service-pick');
         servicePickA.querySelectorAll('div').forEach(div => {
@@ -373,24 +381,20 @@ function currentLanguage() {
         langButton.innerHTML = 'ع';
 
 
-        const bookingTitle = document.querySelector('.booking-introduction-title-arabic');   
-        if (bookingTitle){
+        const bookingTitle = document.querySelector('.booking-introduction-title-arabic');        
         bookingTitle.classList.replace('booking-introduction-title-arabic' ,'booking-introduction-title')
-        bookingTitle.innerText = 'You Will Get A Call Today!';};
+        bookingTitle.innerText = 'You Will Get A Call Today!';
         
 
 
         const bookingDescription = document.querySelector('.booking-introduction-description-arabic');
-        if (bookingDescription){
         bookingDescription.classList.replace('booking-introduction-description-arabic' , 'booking-introduction-description')
-        bookingDescription.innerText = 'To inform you about the service and confirm the booking. Answer these questions to make it as productive as possible!';}
+        bookingDescription.innerText = 'To inform you about the service and confirm the booking. Answer these questions to make it as productive as possible!';
 
         const servicePick = document.querySelector('.service-pick');
         servicePick.querySelectorAll('div').forEach(div => {
           div.style.flexDirection = 'row';
         });
-        
-
 
         const servicePickTitle = document.querySelector('.service-pick-title-translate');
         servicePickTitle.innerText = 'Pick a service';
@@ -660,17 +664,15 @@ function switchLanguage(){
         const langButton = document.querySelector('.language');
         langButton.innerHTML = 'EN';
 
-        const bookingTitleA = document.querySelector('.booking-introduction-title');      
-        if (bookingTitleA){
+        const bookingTitleA = document.querySelector('.booking-introduction-title');        
         bookingTitleA.classList.replace('booking-introduction-title' ,'booking-introduction-title-arabic')
-        bookingTitleA.innerText = 'ستحصل على مكالمة اليوم!';};
+        bookingTitleA.innerText = 'ستحصل على مكالمة اليوم!';
         
 
 
         const bookingDescriptionA = document.querySelector('.booking-introduction-description');
-        if (bookingDescriptionA){
         bookingDescriptionA.classList.replace('booking-introduction-description' , 'booking-introduction-description-arabic')
-        bookingDescriptionA.innerText = 'لشرح لك الخدمات و تأكيد الحجز. أجب عن هذه لأسئلة لتكون المكالمة مثمرة قدر ألإمكان.';};
+        bookingDescriptionA.innerText = 'لشرح لك الخدمات و تأكيد الحجز. أجب عن هذه لأسئلة لتكون المكالمة مثمرة قدر ألإمكان.';
 
         const servicePickA = document.querySelector('.service-pick');
         servicePickA.querySelectorAll('div').forEach(div => {
@@ -782,8 +784,6 @@ function switchLanguage(){
 
         const calendarA = document.querySelector('.arabic-calendar-and-time-container');
         calendarA.classList.replace('arabic-calendar-off','arabic-calendar-on');
-
-
         
         const brandNameA = document.querySelector('.use-input-brand-name');
         brandNameA.style.direction = 'rtl';
@@ -955,17 +955,15 @@ function switchLanguage(){
         langButton.innerHTML = 'ع';
 
 
-        const bookingTitle = document.querySelector('.booking-introduction-title-arabic');   
-        if (bookingTitle){
+        const bookingTitle = document.querySelector('.booking-introduction-title-arabic');        
         bookingTitle.classList.replace('booking-introduction-title-arabic' ,'booking-introduction-title')
-        bookingTitle.innerText = 'You Will Get A Call Today!';};
+        bookingTitle.innerText = 'You Will Get A Call Today!';
         
 
 
         const bookingDescription = document.querySelector('.booking-introduction-description-arabic');
-        if (bookingDescription){
         bookingDescription.classList.replace('booking-introduction-description-arabic' , 'booking-introduction-description')
-        bookingDescription.innerText = 'To inform you about the service and confirm the booking. Answer these questions to make it as productive as possible!';}
+        bookingDescription.innerText = 'To inform you about the service and confirm the booking. Answer these questions to make it as productive as possible!';
 
         const servicePick = document.querySelector('.service-pick');
         servicePick.querySelectorAll('div').forEach(div => {
@@ -2970,13 +2968,103 @@ function dataExtraction(){
 
 
   console.log(userFormData);
+  
+      function sendMessage() {
+        const langButton = document.querySelector('.language');
+        const placeOfOccasionInput = document.querySelector('.place-of-occasion-input').value.trim();
+
+
+      if (userFormData){
+        const serviceBasedContainer = document.querySelector('.service-based-container-on');
+        if (serviceBasedContainer.classList.contains('service1-based-container')){
+                  if (langButton.innerText == 'ع'){
+
+
+
+      const message = 
+      `      ${userFormData.serviceType} for ${userFormData.personalName} 
+      Client Name: ${userFormData.personalName}
+      Client Phone Number:${userFormData.phoneNumber}
+      Service Name:${userFormData.serviceType}
+      Location: ${placeOfOccasionInput}
+      Amount of Visitors
+      Date & Time: ${userFormData.bookingDate} At ${userFormData.bookingTime}
+      
+      
+    SUCCESS TIP: Follow up with your client as soon as booking notification arrives to increase success rate! 
+
+      Even if it is just a booking confirmation message to solidify the deal.
+
+      We wish you success!
+      
+      `;
+      const url = 'https://script.google.com/macros/s/AKfycbwVnT6fixru_RiQdoTrH_sXAJEumlBGhlMWNCSwD_3AsKPFxE7krNvPM9pNFeES0rrl/exec'; // Replace with your deployed Apps Script URL
+
+      fetch(url, {
+        method: 'POST',
+        contentType: 'application/json',
+        body: JSON.stringify({ message: message })
+      })
+      .then(response => response.json())
+      .then(data => {
+        if(data.status === 'success') {
+          alert('Email sent successfully!');
+        } else {
+          alert('Error: ' + data.message);
+        }
+      })
+      .catch(error => alert('Error: ' + error));
+    }else if (langButton.innerText == 'EN'){
+
+            const message = 
+      `      ${userFormData.serviceType} ل${userFormData.personalName} 
+      إسم العميل: ${userFormData.personalName}
+      رقم الهاتف: ${userFormData.phoneNumber}
+      الخدمة المطلوبة: ${userFormData.serviceType}
+      الوقت المطلوب:  ${userFormData.bookingDate} على ${userFormData.bookingTime}
+      
+          
+  باشر بالتواصل و المتابعة مع العميل فوراَ لضمان نسبة نجاح أعلى! ولو برسالة تأكيد الحجز.
+
+      
+      `;
+      const url = 'https://script.google.com/macros/s/AKfycbwVnT6fixru_RiQdoTrH_sXAJEumlBGhlMWNCSwD_3AsKPFxE7krNvPM9pNFeES0rrl/exec'; // Replace with your deployed Apps Script URL
+
+      fetch(url, {
+        method: 'POST',
+        contentType: 'application/json',
+        body: JSON.stringify({ message: message })
+      })
+      .then(response => response.json())
+      .then(data => {
+        if(data.status === 'success') {
+          alert('Email sent successfully!');
+        } else {
+          alert('Error: ' + data.message);
+        }
+      })
+      .catch(error => alert('Error: ' + error));
+    }
+        }
+
+
+  
+  
+  
+  
+  }};
+      sendMessage();
+
 };
+
 
 
 
 function saveUserData(){
   localStorage.setItem('userData' , JSON.stringify(userFormData));
+  
 };
+
 
 
 
@@ -3428,8 +3516,6 @@ getCurrentTimeRounded();
 
 
 
-
-
 document.querySelector('.booking-submit-button').addEventListener('click', function(event) {
 
 
@@ -3452,6 +3538,7 @@ alert('Kindly, enter the required information first.');}else if (langButton.inne
     event.preventDefault(); // Prevents navigation to the thank you page
   }else {
     window.location.href='the-thank-you-page.html'; 
+    sendMessage();
   }
 } else if (serviceBasedContainer.classList.contains('service2-based-container')){
   const langButton = document.querySelector('.language');
@@ -3469,6 +3556,7 @@ alert('Kindly, enter the required information first.');}else if (langButton.inne
     event.preventDefault(); // Prevents navigation to the thank you page
   }else {
     window.location.href='the-thank-you-page.html'; 
+    sendMessage();
   }
 }else if  (serviceBasedContainer.classList.contains('service3-based-container')){
   const fullName = document.querySelector('.fullname-input').value.trim();
@@ -3483,6 +3571,7 @@ alert('Kindly, enter the required information first.');}else if (langButton.inne
     event.preventDefault(); // Prevents navigation to the thank you page
   }else {
     window.location.href='the-thank-you-page.html'; 
+    sendMessage();
   }
 }else if  (serviceBasedContainer.classList.contains('service4-based-container')){
   const langButton = document.querySelector('.language');
@@ -3502,6 +3591,7 @@ alert('Kindly, enter the required information first.');}else if (langButton.inne
     event.preventDefault(); // Prevents navigation to the thank you page
   }else {
     window.location.href='the-thank-you-page.html'; 
+    sendMessage();
   }}
 
 });
@@ -3510,6 +3600,9 @@ alert('Kindly, enter the required information first.');}else if (langButton.inne
 
 
 currentLanguage();
+
+
+
 
 
 
